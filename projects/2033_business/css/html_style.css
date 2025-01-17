@@ -1,0 +1,57 @@
+.main {
+  padding-top: 100px;
+  max-width: 900px; 
+  background-color: white;
+}
+
+body {
+  background-image: url(../img/cartographer.png);
+  background-color: skyblue;
+  background-position: center 0px; /* Ensures starting position */
+  background-attachment: fixed; /* Optional: Ensures background stays fixed for parallax */
+}
+
+.button-div {
+  pointer-events: none;
+}
+
+.btt-button {
+  pointer-events: auto;
+  z-index: 1050;
+}
+
+.nav-font {
+  font-size: large;
+}
+
+.inactive-nav{
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+}
+
+.active-nav {
+  color: white;
+  font-weight: bold;
+}
+
+html {
+  scroll-padding-top: 90px; 
+}
+
+.recordImg {
+  max-height: 175px; 
+  max-width: 175px;
+}
+
+@keyframes spinRecord { 
+  0% { rotate:0deg; } 
+  100% { rotate: 360deg; }
+} 
+
+#record {
+  animation: spinRecord 3s infinite linear;
+}
+
+#record:hover {
+  animation-play-state: paused;
+}

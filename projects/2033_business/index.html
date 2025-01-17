@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Brown's Record Store</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/html_style.css">
+  <script type="text/javascript" src="js/index_js.js"></script>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/xicon">
+</head>
+
+<body onload="setDayMsg()">
+  <!-- Fixed Navbar -->
+  <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark" id="navbar">
+    <div class="container-fluid">
+      <a href="#">
+        <img src="img/icon.png" alt="brand logo" title="brandlogo" width="75" height="75" class="ms-2 me-3">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link nav-font" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-font" href="#products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-font" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-font" href="#references">References</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid main px-3 px-sm-5 pb-5">
+    <!--Banner-->
+    <img src="img/banner.jpg" title="Record store banner" alt="Record store banner" class="img-fluid rounded-4">
+    <h2 class="text-center mt-4" id="dayMsg"></h2>
+
+    <!--About Section-->
+    <section id="about">
+      <div class="row row-cols-2">
+        <div>
+          <h1 class="mt-3">About</h1>
+          <p>Stop by and listen up at Brown's Record Store, located at 123 Dundas St. London Ontario. We are an
+            independent, locally owned record shop. We have a huge collection of records to choose from so come see what
+            we have in store or check our Products section to see if we have what you are looking for. We also do custom
+            orders, so if you can't find what you must have, let us know and we can order it for you!</p>
+        </div>
+        <div>
+          <img src="img/window.jpg" title="Outside the store" alt="Outside the store" class="img-fluid rounded-4 mt-4">
+          <img src="img/inside.jpg" title="Inside the store" alt="Inside the store" class="img-fluid rounded-4 my-3">
+        </div>
+      </div>
+      <h3 class="ms-md-3">Our Team</h3>
+      <div class="row row-cols-3 py-2 mx-md-4">
+        <div>
+          <img src="img/colin.jpg" title="Photo of Colin" alt="Photo of Colin" class="img-fluid rounded-4">
+          <h5 class="mt-2">Colin Brown, Owner</h5>
+          <p>Meet our owner Colin. He's loved collecting records since he was a kid and has a collection of over 1000
+            records. He loves to talk about music, so if you see him, ask him for music recommendations.</p>
+        </div>
+        <div>
+          <img src="img/mike.jpg" title="Photo of Mike" alt="Photo of Mike" class="img-fluid rounded-4">
+          <h5 class="mt-2">Mike Durham, Merchandise Manager</h5>
+          <p>Mike is our manager of merchandise. If you want to make a custom order, he is your man. You can usually
+            find him at the back of the store at the custom order desk.</p>
+        </div>
+        <div>
+          <img src="img/anna.jpg" title="Photo of Anna" alt="Photo of Anna" class="img-fluid rounded-4">
+          <h5 class="mt-2">Anna Smith, Cashier</h5>
+          <p>Get to know Anna at the cash register. Don't worry, she won't make sure of your music taste. If you can't
+            decide what to get, she will help you decide.</p>
+        </div>
+      </div>
+    </section>
+    <hr class="mx-4 mt-4" />
+
+    <!--Products Section-->
+    <section id="products">
+      <h1 class="pt-3">Products</h1>
+      <div class="row row-cols-2 row-cols-md-3">
+        <div class="my-3">
+          <img src="img/melodrama.jpg" title="Melodrama cover" alt="Melodrama cover" class="img-fluid rounded-4">
+          <h4 class="mt-2">Melodrama</h4>
+          <h5>Lorde</h5>
+          <p class="mb-1">The second studio album by kiwi artist Lorde. Released in 2017. It is Colin's favourite album of all time.
+          </p>
+          <p class="text-muted upc my-2">602557547108</p>
+          <a class="btn btn-outline-primary">Add to Cart</a>
+        </div>
+        <div class="my-3">
+          <img src="img/diwttity.jpg" title="Desire, I Want to Turn Into You cover"
+            alt="Desire, I Want to Turn Into You cover" class="img-fluid rounded-4">
+          <h4 class="mt-2">Desire, I Want to Turn Into You</h4>
+          <h5>Caroline Polachek</h5>
+          <p class="mb-1">The fourth studio album by American artist Caroline Polachek. Released in 2023. Colin gives it a 9/10.</p>
+          <p class="text-muted upc my-2">197187531981</p>
+          <a class="btn btn-outline-primary">Add to Cart</a>
+        </div>
+        <div class="my-3">
+          <img src="img/brat.jpg" title="BRAT cover" alt="BRAT cover" class="img-fluid rounded-4">
+          <h4 class="mt-2">BRAT</h4>
+          <h5>Charli xcx</h5>
+          <p class="mb-1">The sixth studio album by British artist Charli xcx. Released in 2024. Colin gives it a 10/10.</p>
+          <p class="text-muted upc my-2">075678611674</p>
+          <a class="btn btn-outline-primary">Add to Cart</a>
+        </div>
+        <div class="my-3">
+          <img src="img/charm.jpg" title="Charm cover" alt="Charm cover" class="img-fluid rounded-4">
+          <h4 class="mt-2">Charm</h4>
+          <h5>Clairo</h5>
+          <p class="mb-1">The third time's the charm for American artist Clairo. Released in 2024. Colin gives it a 10/10.</p>
+          <p class="text-muted upc my-2">196922870552</p>
+          <a class="btn btn-outline-primary">Add to Cart</a>
+        </div>
+        <div class="my-3">
+          <img src="img/starfucker.jpg" title="Starfucker cover" alt="Starfucker cover" class="img-fluid rounded-4">
+          <h4 class="mt-2">STARFUCKER</h4>
+          <h5>Slayyyter</h5>
+          <p class="mb-1">The third studio album by American artist Slayyyter. Released in 2023. It is Colin's runner up favourite
+            album.</p>
+          <p class="text-muted upc my-2">9299254914</p>
+          <a class="btn btn-outline-primary">Add to Cart</a>
+        </div>
+        <div class="my-3">
+          <img src="img/renaissance.jpg" title="Renaissance cover" alt="Renaissance cover" class="img-fluid rounded-4">
+          <h4 class="mt-2">RENAISSANCE</h4>
+          <h5>Beyoncé</h5>
+          <p class="mb-1">The seventh studio album by American artist Beyoncé. Released in 2022. It is Colin's second runner up
+            favourite album.</p>
+          <p class="text-muted upc my-2">19658719671</p>
+          <a class="btn btn-outline-primary">Add to Cart</a>
+        </div>
+      </div>
+    </section>
+    <hr class="mx-4 mt-4" />
+
+    <!--Contact Section-->
+    <section id="contact">
+      <h1 class="pt-3 pb-2">Contact</h1>
+      <p>Have a question? Ask here!</p>
+      <form class="needs-validation" novalidate="">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <input class="form-control" type="text" placeholder="Name" name="name" id="name" onblur="checkName()" />
+            <div class="invalid-feedback">
+              Must contain atleast 4 charcters, only A-Z.
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <input class="form-control" type="text" placeholder="Phone Number" name="phone" id="phone"
+              onblur="checkPhone()" />
+            <div class="invalid-feedback">
+              Must be in the format "123 456 7890"
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <select id="reason" name="reason" class="form-control" onchange="checkReason()">
+              <option value="geninq">General Inquiry</option>
+              <option value="pricing">Pricing</option>
+              <option value="prodinf">Product Info</option>
+              <option value="ship">Shipping</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="col-md-6 d-none mb-3">
+            <input class="form-control" type="text" placeholder="Product ID" name="pid" id="pid" onblur="checkPid()" />
+            <div class="invalid-feedback">
+              Must be an existing product ID.
+            </div>
+          </div>
+
+          <div class="col-12 mb-3">
+            <textarea class="form-control" placeholder="Message" name="message" id="message" rows="5"
+              onblur="checkMessage()" onkeyup="updateCharCount()"></textarea>
+            <div class="invalid-feedback">
+              Must be 10-30 characters.
+            </div>
+            <div>
+              <p id="charCount" class="text-muted mt-1 mb-0 ms-2">0 characters</p>
+            </div>
+          </div>
+
+          <div class="col-12 mb-5">
+            <a class="btn btn-outline-primary">Send</a>
+            <input class="btn btn-outline-primary mx-1" type="reset" onclick="resetForm()">
+          </div>
+      </form>
+    </section>
+    <hr class="m-4" />
+
+    <!--References Section-->
+    <section id="references" class="mb-5">
+      <h1 class="pt-3 pb-2">References</h1>
+      <h3 class="ms-md-2">About Section</h3>
+      <ul>
+        <li>
+          <a href="https://www.pexels.com/photo/neon-signage-turned-on-glass-window-2043529/" target="_blank">Outside
+            record store</a>
+        </li>
+        <li>
+          <a href="https://www.pexels.com/photo/woman-standing-leaning-on-desk-2121671/" target="_blank">Inside record
+            store</a>
+        </li>
+        <li>
+          <a href="https://www.pexels.com/photo/shallow-focus-photography-of-man-1300402/" target="_blank">Mike</a>
+        </li>
+        <li>
+          <a href="https://www.pexels.com/photo/woman-wearing-white-turtle-neck-shirt-3290236/" target="_blank">Anna</a>
+        </li>
+      </ul>
+      <h3 class="ms-md-2">Products Section</h3>
+      <ul>
+        <li>
+          <a href="https://www.albumartexchange.com/covers/506250-melodrama" target="_blank">Melodrama Cover</a>
+        </li>
+        <li>
+          <a href="https://www.albumartexchange.com/covers/744163-desire-i-want-to-turn-into-you"
+            target="_blank">DIWTTITY
+            Cover</a>
+        </li>
+        <li>
+          <a href="https://www.albumartexchange.com/covers/797005-brat" target="_blank">BRAT Cover</a>
+        </li>
+        <li>
+          <a href="https://www.albumartexchange.com/covers/801615-charm" target="_blank">Charm Cover</a>
+        </li>
+        <li>
+          <a href="https://www.albumartexchange.com/covers/782808-starfucker" target="_blank">STARFUCKER Cover</a>
+        </li>
+        <li>
+          <a href="https://www.albumartexchange.com/covers/789382-renaissance" target="_blank">RENAISSANCE Cover</a>
+        </li>
+      </ul>
+      <h3 class="ms-md-2">Other</h3>
+      <ul>
+        <li>
+          <a href="https://www.pexels.com/photo/man-standing-near-clear-glass-panel-surface-139262/"
+            target="_blank">Banner image</a>
+        </li>
+        <li>
+          Logo (myself)
+        </li>
+        <li>
+          Favicon (myself)
+        </li>
+        <li>
+          Spinning record (myself)
+        </li>
+      </ul>
+      <div class="pt-4">
+        <img src="img/record.png" class="img-fluid mx-auto d-block recordImg" alt="Spinning record"
+          title="Spinning record" id="record">
+      </div>
+    </section>
+
+    <footer class="mt-auto py-3 mb-4 bg-light text-center">
+      <div class="container">
+        <span class="text-muted">Made by Colin Brown | CS2033 | Assignment 2</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Back to Top Button -->
+  <div class="fixed-bottom m-3 button-div">
+    <a class="btn btn-lg btn-secondary btt-button" role="button" href="#">
+        Back to Top
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
