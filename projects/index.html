@@ -215,9 +215,9 @@
                 <p>During end of my third year, I started regularly going to the gym on campus. I eventually learned
                     that the staff there post updates about their live usage stats every 30 minutes. After initially
                     finding it difficult to tell whether 80 people meant busy or not because I had to frame of reference
-                    for that number, I thought I would write a script to scrape as much of their tweet data as much as
-                    possible and then graph it.</p>
-                <p>I initially found it difficult to get the data from Twitter due to the API changes they made changing
+                    for that number, I thought I would write a script to scrape as much of their tweet data as possible
+                    and then graph it.</p>
+                <p>At first I found it difficult to get the data from Twitter due to the API changes they made changing
                     the free tier of their API to have no access to pulling tweets, instead requiring a $100USD/month
                     subscription to do that. To get around that, I first tried using JS package, rettiwt, which was only
                     able to get me the most recent page of tweets and not the next, so I could only get about 20. When
@@ -225,8 +225,10 @@
                     package Tweety-ns. It is a reverse engineered front-end API that uses a web-client sign-in. It was
                     able to get me the most recent 800 tweets which was good enough for my use.</p>
                 <p>Over time, as I learned more, I improved my code and ran it once a month to keep the data up to date.
-                    I currently have collected <a href="assets/Output.txt" target="_blank">over 4100 data points</a>
-                    starting on May 2nd. You can check out my code, data, and Excel spreadsheet on my Github <a
+                    I currently have collected <a href="assets/RecOutput.txt" target="_blank">over 5000 data points</a>
+                    from May 2nd, 2024 oward and I am currently working on developing a linear regression machine
+                    learning model to predict usage for the rest of the day based on the current attendance. You can
+                    check out my code, data, and Excel spreadsheet on my Github <a
                         href="https://github.com/Drag0nCodes/UWO-Rec-Centre-Visits" target="_blank">here</a>.</p>
                 <!--Rec centre first image-->
                 <div class="row align-items-md-stretch mb-1 mt-4">
