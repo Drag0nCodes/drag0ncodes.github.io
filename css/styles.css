@@ -42,13 +42,13 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 123, 157, 237;
+  --bs-primary-rgb: 41, 81, 175;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
-  --bs-light-rgb: 248, 249, 250;
+  --bs-light-rgb: 247, 250, 255;
   --bs-dark-rgb: 33, 37, 41;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
@@ -73,8 +73,8 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #3c5ca7;
-  --bs-link-hover-color: #233869;
+  --bs-link-color: #7B9DED;
+  --bs-link-hover-color: #2951AF;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -7044,6 +7044,12 @@ textarea.form-control-lg {
 
 .shadow {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  transition: .5s;
+}
+.shadow:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  transition: .5s;
+  transform: scale(1.01);
 }
 
 .shadow-sm {
@@ -10904,9 +10910,8 @@ p.lead {
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    max-width: 12rem;
+    max-height: 12rem;
   }
   #sideNav .navbar-collapse {
     display: flex;
@@ -10980,4 +10985,8 @@ section.resume-section .resume-section-content {
 
 .nav-link.selected {
   color: white; 
+}
+
+.body-content {
+  background-color: #EEF1FB;
 }
