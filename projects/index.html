@@ -24,8 +24,7 @@
         <a class="navbar-brand" href="..">
             <span class="d-block d-lg-none">Colin Brown</span>
             <span class="d-none d-lg-block"><img title="Back to Resume" alt="Profile photo"
-                    class="img-fluid img-profile mx-auto mb-2" src="assets/profile.png"
-                    alt="..." /></span>
+                    class="img-fluid img-profile mx-auto mb-2" src="assets/profile.png" alt="..." /></span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
@@ -34,7 +33,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="#projects">My Projects</a></li>
                 <li class="nav-item"><a class="nav-link" href="#MRC">My Record Collection</a></li>
-                <li class="nav-item"><a class="nav-link" href="#RecCentre">Rec Centre Usage Stats</a></li>
+                <li class="nav-item"><a class="nav-link" href="#RecCentre">Time Series Prediction with RNNs</a></li>
                 <li class="nav-item"><a class="nav-link" href="#ServiceReg">Service Registry</a></li>
                 <li class="nav-item"><a class="nav-link" href="#BusSite">Business Website</a></li>
                 <li class="nav-item"><a class="nav-link" href="#GIS">GIS Project</a></li>
@@ -51,11 +50,12 @@
                 </h1>
                 <p class="lead"><b>Here you can take a look at some of the projects that I have worked on, either as
                         personal projects or for school.</b></p>
-                <p class="lead mb-4">This site is also sort of a project of its own I suppose but I didn't give it a
-                    dedicated section because I'd rather you just look around for yourself. I started with a template
-                    for this page that gave me the nav/sidebar and the rest was created by me. I made it fully
-                    responsive so please resize your browser to see the elements change and reorganize to fit the new
-                    size. Also, my favourite project is "<a href="#MRC">My Record Collection</a>" so don't miss it.</p>
+                <p class="lead mb-4">This site is also sort of a project of its own, I suppose. I started with a
+                    template
+                    that gave me the nav/sidebar and the rest was created by me. I made it fully
+                    responsive, so please resize your browser to see the elements change and reorganize to fit the
+                    window size. Also, my favourite project is <a href="#MRC">My Record Collection</a> so don't miss it.
+                </p>
                 <h3><a href="..">Back to Resume</a></h3>
             </div>
         </section>
@@ -111,7 +111,7 @@
                     from friends that saw and used the app and adding things I wanted it to be able to do. Below are
                     features I added with each minor version increment.</p>
                 <!--MRC version table-->
-                <div class="row bg-light shadow mx-2 my-4 border border-primary">
+                <div class="row bg-light shadow mx-1 my-4 border border-primary">
                     <div class="col-sm-6 col-md-3 col-lg-6 col-xl-3 border p-3 p-md-4">
                         <h3>v1.1.0</h3>
                         <ul class="mb-lg-1">
@@ -126,7 +126,7 @@
                             <li>Import Discogs collection (multi-threaded)</li>
                             <li>Saved preferences</li>
                             <li>Checkmarks in tag menus</li>
-                            <li>Delete records and tags</li>
+                            <li>Delete all records and tags</li>
                             <li>Reset filters</li>
                             <li>Pick a record for me</li>
                             <li>About and contact info</li>
@@ -138,7 +138,7 @@
                             <li>Edit record attributes</li>
                             <li>Create a custom record</li>
                             <li>Progress bar for Discogs import</li>
-                            <li>Tag count in sort list</li>
+                            <li>Tag count in filter list</li>
                             <li>Export data</li>
                             <li>Filter by rating</li>
                         </ul>
@@ -198,7 +198,7 @@
                     <div class="col-12 col-md-4 col-lg-12 col-xl-4">
                         <div class="p-3 p-md-4 bg-light border border-primary rounded-3 shadow">
                             <h3>My Collection</h3>
-                            <p class="mb-0">As an extra, here are photos of my collection. On the left are the records I
+                            <p class="mb-0">As a bonus, here is my physical collection. On the left are the records I
                                 listen to most and on the right, the least</p>
                         </div>
                     </div>
@@ -210,63 +210,164 @@
         <!--Rec centre stats section-->
         <section class="resume-section" id="RecCentre">
             <div class="resume-section-content">
-                <h2 class="mb-4">Rec Centre Usage Stats</h2>
-                <div class="subheading mb-3">Languages and Skills: Python, Excel, Data Analysis</div>
-                <p>During end of my third year, I started regularly going to the gym on campus. I eventually learned
-                    that the staff there post updates about their live usage stats every 30 minutes. After initially
-                    finding it difficult to tell whether 80 people meant busy or not because I had to frame of reference
-                    for that number, I thought I would write a script to scrape as much of their tweet data as possible
-                    and then graph it.</p>
-                <p>At first I found it difficult to get the data from Twitter due to the API changes they made changing
-                    the free tier of their API to have no access to pulling tweets, instead requiring a $100USD/month
-                    subscription to do that. To get around that, I first tried using JS package, rettiwt, which was only
-                    able to get me the most recent page of tweets and not the next, so I could only get about 20. When
-                    the Rec was posting more than 20 tweets a day, that wasn't super useful. Instead, I tried a Python
-                    package Tweety-ns. It is a reverse engineered front-end API that uses a web-client sign-in. It was
-                    able to get me the most recent 800 tweets which was good enough for my use.</p>
-                <p>Over time, as I learned more, I improved my code and ran it once a month to keep the data up to date.
-                    I currently have collected <a href="assets/RecOutput.txt" target="_blank">over 5000 data points</a>
-                    from May 2nd, 2024 onward and I am currently working on developing a linear regression machine
-                    learning model to predict usage for the rest of the day based on the current attendance. You can
-                    check out my code, data, and full Excel spreadsheet on my Github <a
-                        href="https://github.com/Drag0nCodes/UWO-Rec-Centre-Visits" target="_blank">here</a>.</p>
+                <h2 class="mb-4">Time Series Prediction with Recurrent Neural Networks</h2>
+                <div class="subheading mb-3">Languages and Skills: Python, Artificial Neural Networks, PyTorch, Time
+                    Series Prediction, Data Analysis</div>
+                <p><a href="assets/CS4442 Final Report.pdf" target="_blank">Full report pdf</a></p>
+                <p>
+                    <b>With this project, I set out to create an AI model to forecast the attendance at the campus
+                        gym.</b>
+                    During end of my third year, I started regularly going to the gym on campus. I eventually learned
+                    that the staff post live attendance updates every 30 minutes on Twitter. After initially
+                    finding it difficult to tell whether 80 in the weight room meant busy or not as I had no prior frame
+                    of reference, I thought I would write a script to scrape as much of their tweet data as possible
+                    and then graph it. With the python package I was using, I could scrape the most recent ~800 tweets.
+                    Running this once a month for 8 months, I accumulated <a href="assets/RecOutput.txt"
+                        target="_blank">over 5000 tuples</a> from May 2nd, 2024 onward.
+                </p>
+
                 <!--Rec centre first image-->
                 <div class="row align-items-md-stretch mb-1 mt-4">
-                    <div class="col-md-6 mb-4">
-                        <div class="p-md-4 bg-light border border-primary rounded-3 shadow">
-                            <img title="Rec centre usage over time of day by the day of the week"
-                                alt="Rec centre usage over time of day by the day of the week" src="assets/fwdotw.png"
-                                class="img-fluid d-md-none rounded-top">
-                            <h3 class="pt-3 px-3 p-md-0">Usage by Day of the Week</h3>
-                            <p class="pb-3 px-3 p-md-0 mb-0">Here is the usage by day of the week for just the fall and
-                                winter (regular school) terms. This is the data I was most interested in as I only
-                                planned to go to the gym once or twice a week. By figuring out the least busy day, I
-                                started to only go to the gym every Sunday.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-sm-4 d-none d-md-block">
+                    <div class="col-sm-6 mb-sm-4 d-none d-sm-block">
                         <img title="Rec centre usage over time of day by the day of the week"
-                            alt="Rec centre usage over time of day by the day of the week" src="assets/fwdotw.png"
+                            alt="Rec centre usage over time of day by the day of the week" src="assets/dotw.png"
                             class="rounded-3 bg-light img-fluid border shadow">
                     </div>
-                </div>
-                <!--Rec centre second image-->
-                <div class="row align-items-md-stretch mb-1 mt-4">
-                    <div class="col-md-6 mb-md-4">
-                        <img title="Rec centre usage over time of day by month"
-                            alt="Rec centre usage over time of day by month" src="assets/months.png"
-                            class="rounded-3 bg-light img-fluid shadow border d-none d-md-block">
-                    </div>
-                    <div class="col-md-6 mb-4">
+                    <div class="col-sm-6 mb-4">
                         <div class="p-md-4 bg-light border border-primary rounded-3 shadow">
-                            <img title="Rec centre usage over time of day by month"
-                                alt="Rec centre usage over time of day by month" src="assets/months.png"
-                                class="img-fluid d-md-none rounded-top">
-                            <h3 class="pt-3 px-3 p-md-0">Usage by Month</h3>
-                            <p class="pb-3 px-3 p-md-0 mb-0">Here you can see the usage by the month based on the hour
-                                of the day. You can see that in the summer months the gym is a lot less busy when most
-                                of the students have gone home.</p>
+                            <img title="Rec centre usage over time of day by the day of the week"
+                                alt="Rec centre usage over time of day by the day of the week" src="assets/dotw.png"
+                                class="img-fluid d-sm-none rounded-top">
+                            <h3 class="pt-3 px-3 p-md-0">Usage by Day of the Week</h3>
+                            <p class="pb-3 px-3 p-md-0 mb-0">I referred to this as my day of the week average
+                                model because it took every data point for each day of the week and hour and then simply
+                                averaged them together. This is the data I was most interested in initially as it helped
+                                me pick the best day and time to go to the gym. Looking back, I probably could have just
+                                googled "what day is the gym least busy?" but that's beside the point. I ended up
+                                picking early afternoon on Sundays. I also had charts for each month separately so I
+                                could see how different months were more or less busy.</p>
                         </div>
+                    </div>
+                </div>
+
+                <p>
+                    Quickly, I realized I wanted to do more with the data I was accumulating. So, for my AI 2 final
+                    project, I challenged myself to learn about recurrent neural networks and create a long short-term
+                    memory (LSTM) model that could perform time series prediction and forecast how many people there
+                    would be at the gym on any given day. It would do this by taking as input the previous five hours of
+                    attendance readings and then predict each hour's attendance for the rest of the day.
+                </p>
+                <p>
+                    During my research and development, I discovered a previous student's attempt at solving my problem,
+                    which they referred to as <a href="https://x.com/westerngymbot" target="_blank">GyMBRo</a>, AKA Gym
+                    Monitoring By Robot. Clever name. Every day this bot would post a morning forecast graph on Twitter
+                    and, throughout the day, fetch tweets from the Rec Centre and plot those points to the graph. The
+                    issue I had with this implementation is that it did not adjust its prediction throughout the day,
+                    say if the gym were abnormally busy, which I planned to have mine do via inputting of the five
+                    points to make the forecast from. GyMBRo did, however, give me a good comparison for my forecasts
+                    and, when I found its source code, an additional 7 years of attendance data (50 000 tuples) to help
+                    with model training. Because good LSTM models are known to be very dependent on training with lots
+                    of data, I knew this was a big win. Thanks Demetri!
+                </p>
+                <p>
+                    While keeping things concise here on my site, I engineered my labeled tuples to consist of 5
+                    features: the month (1-12), the week (0-52), the day (1-31), the hour (0-23), and the day of the
+                    week (0-6). The label was the number of people in the weight room. This label would also be a
+                    feature when put back into the model to get the next prediction. I also added ~1000 tuples to my
+                    dataset with labels of '0' for then the gym was closed. After feature engineering, I took 80% of the
+                    days and saved them for training, 10% for validation, and the remaining 10% for testing. I then used
+                    PyTorch to train my LSTM model. I trained 100 epochs for each different variation of hyperparameters
+                    and saved the one with the best validation MSE. Then I chose the hyperparameter combination with
+                    the best test MSE. I ended up creating a model with a test MSE of 541.6. This is
+                    noticeably better than the MSE of my simple day of the week average model, which had a MSE of 752.2
+                    on the same test dataset. For more in-depth background information, methodology, results, and
+                    conclusions of my research, find my <a href="assets/CS4442 Final Report.pdf" target="_blank">full
+                        report here</a>.
+                </p>
+
+                <!--Hyperparam chart-->
+                <div class="row align-items-md-stretch mb-1 mt-4">
+                    <div class="col-md-6 col-lg-12 col-xl-6 mb-4">
+                        <div class="bg-light border border-primary rounded-3 shadow">
+                            <img title="Hyperparameter comparison chart" alt="Hyperparameter comparision chart"
+                                src="assets/tuning.png"
+                                class="img-fluid d-md-none d-lg-block d-xl-none rounded-top p-2">
+                            <h3 class="pt-3 px-3 px-md-4 pt-md-4 pt-lg-3 pt-xl-4">Hyperparameter Tuning</h3>
+                            <p class="pb-3 px-3 px-md-4 mb-2">This chart shows my process of finding the right
+                                hyperparameters for training. The column in light green shows the best combination I
+                                found. Each other column has a grey value that differs from the best combination. The
+                                validation and test mean squared error can be seen for each combination at the bottom
+                                colour coded from green (best) to red (worst). Test also has root mean squared error.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-12 col-xl-6 mb-md-4">
+                        <img title="Hyperparameter comparision chart" alt="Hyperparameter comparision chart"
+                            src="assets/tuning.png"
+                            class="rounded-3 bg-light img-fluid shadow border d-none d-md-block d-lg-none d-xl-block p-1">
+                    </div>
+                </div>
+
+                <p>
+                    After concluding my research, I learned lots about what it takes to create an AI model,
+                    the necessary steps needed to format training and testing data, and how to communicate my findings.
+                    Ultimately, I considered my model a success. It preformed better than my previous attempts of simply
+                    averaging previous
+                    days' data and, often, I found the model to preform better the GyMBRo model. I did not find the
+                    model's performance at forecasting at the start of the day to be very
+                    accurate, before any attendance observations have been made. I think the model could be improved by
+                    adding more features, specifically for upcoming holidays and open/closed hours. As well, perhaps
+                    combining two models for a forecast would be beneficial. Using a different architecture to make a
+                    morning forecast could counteract the underestimating morning problem.
+                </p>
+                <p>
+                    To run my code on your own, find <a href="https://github.com/Drag0nCodes/RecCentreLSTM"
+                        target="_blank">my repo here</a> and run predict.py in the LSTM folder.
+                </p>
+
+                <!--Rec centre animated graph-->
+                <div class="row align-items-md-stretch mb-1 mt-4">
+                    <div class="col-sm-6 mb-md-4">
+                        <img title="Animated Forecast for April 18, 2023" alt="Animated Forecast for April 18, 2023"
+                            src="assets/Apr18_LSTMAnimated.gif"
+                            class="rounded-3 bg-light img-fluid shadow border d-none d-sm-block">
+                    </div>
+                    <div class="col-sm-6 mb-4">
+                        <div class="p-md-4 bg-light border border-primary rounded-3 shadow">
+                            <img title="Animated Forecast for April, 18 2023" alt="Animated Forecast for April, 18 2023"
+                                src="assets/Apr18_LSTMAnimated.gif" class="img-fluid d-sm-none rounded-top">
+                            <h3 class="pt-3 px-3 p-md-0">Animated Forecast for April 18, 2023</h3>
+                            <p class="pb-3 px-3 p-md-0 mb-0">This is an animation of many hourly forecasts for April
+                                18, 2023 throughout the day. The red line shows the prediction made by the model for the
+                                remainder of the day based on the 5-hour long input sequence in blue. The green line
+                                shows the actual attendance reported by Rec Centre staff. This green line is what the
+                                red prediction line should, in theory, match up or be very close to. Additionally, the
+                                MSE can also be seen for each prediction at the top. The initial morning performance is
+                                noticeably worse than later in the day.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Rec centre second graph-->
+                <div class="row align-items-md-stretch mb-1 mt-4">
+                    <div class="col-sm-6 mb-4">
+                        <div class="p-sm-3 p-md-4 bg-light border border-primary rounded-3 shadow">
+                            <img title="Forecast for March 30 2023 at 11am" alt="Forecast for March 30 2023 at 11am"
+                                src="assets/Mar30_LSTM.png" class="img-fluid d-sm-none rounded-top">
+                            <h3 class="pt-3 px-3 p-sm-0">Poor Forecasts for March 30, 2023</h3>
+                            <p class="pb-3 px-3 p-sm-0 mb-0">Here you can see three predictions made for March 30, 2023.
+                                In black, my model's forecast made at 5 a.m. In red, my model's forecast made at 11 a.m.
+                                In orange, the average attendance for a Thursday in March. Green shows actual attendance
+                                observations. This day was abnormally busy, likely due to the end of the term
+                                approaching, and the forecasts were poor. The 11 a.m. forecast predicts a busier
+                                day overall, but converges on a normal day by closing, which was not correct.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-sm-4 d-none d-sm-block">
+                        <img title="Forecast for March 30 2023 at 11am" alt="Forecast for March 30 2023 at 11am"
+                            src="assets/Mar30_LSTM.png" class="rounded-3 border img-fluid shadow">
                     </div>
                 </div>
             </div>
@@ -300,7 +401,7 @@
                 </p>
                 <div class="row">
                     <!--4471 first image group-->
-                    <div class="mb-1 mt-4 col-xxl-6">
+                    <div class="mb-1 mt-4 col-md-6 col-lg-12 col-xxl-6">
                         <div class="bg-light border border-primary rounded-3 shadow p-3 p-md-4">
                             <div class="text-center mb-3">
                                 <img title="Overall system architecture" alt="Overall system architecture"
@@ -324,16 +425,22 @@
                         </div>
                     </div>
                     <!--4471 second image group-->
-                    <div class="mb-1 mt-4 col-xxl-6">
+                    <div class="mb-1 mt-4 col-md-6 col-lg-12 col-xxl-6">
                         <div class="bg-light border border-primary rounded-3 shadow p-3 p-md-4">
                             <div class="text-center row mb-3">
-                                <img title="Architecture context diagram" alt="Architecture context diagram"
-                                    src="assets/4471_context.png"
-                                    class="img-fluid rounded-top col-sm-6 col-xxl-12 mb-3 mb-sm-0 mb-xxl-3">
-                                <hr class="m-0 mb-3 d-block d-sm-none d-xxl-block" />
-                                <img title="Architecture component-and-connector diagram"
-                                    alt="Architecture component-and-connector diagram" src="assets/4471_cc.png"
-                                    class="img-fluid rounded-top col-sm-6 col-xxl-12">
+                                <div class="col-sm-6 col-md-12 col-lg-6 col-xxl-12">
+                                    <p>Context Diagram</p>
+                                    <img title="Architecture context diagram" alt="Architecture context diagram"
+                                        src="assets/4471_context.png"
+                                        class="img-fluid rounded-top mb-3 mb-sm-0 mb-md-3 mb-lg-0 mb-xxl-3">
+                                </div>
+                                <hr class="m-0 mb-3 d-block d-sm-none d-md-block d-lg-none d-xxl-block" />
+                                <div class="col-sm-6 col-md-12 col-lg-6 col-xxl-12">
+                                    <p>Component Diagram</p>
+                                    <img title="Architecture component-and-connector diagram"
+                                        alt="Architecture component-and-connector diagram" src="assets/4471_cc.png"
+                                        class="img-fluid rounded-top">
+                                </div>
                             </div>
                             <h3>A Couple More Diagrams</h3>
                             <p>The first diagram illustrates the context in which the architecture would be deployed.
@@ -344,21 +451,34 @@
                         </div>
                     </div>
                     <!--4471 demo video-->
-                    <div class="mb-1 mt-4">
+                    <div class="mb-1 mt-4 col-md-6 col-lg-12 col-xl-6">
                         <div class="bg-light border border-primary rounded-3 shadow">
-                            <div class="text-center row m-0">
-                                <video class="rounded-top p-0" controls>
-                                    <source src="assets/4471_demo.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="p-3 p-md-4 pt-3">
+                            <video class="rounded-3 w-100 d-block" controls>
+                                <source src="assets/4471_demo.mp4" type="video/mp4">
+                            </video>
+                            <div class="p-3 px-lg-4 pb-lg-4 d-md-none d-lg-block d-xl-none">
                                 <h3>Demo</h3>
                                 <p>Finally, here is a quick demo of the implementation of the architecture running
-                                    locally. I unfortunately only have microservice 1 and 2 on my repository; the other
-                                    3 are managed by my groupmates.</p>
+                                    locally. I unfortunately only have microservice 1 and 2 on my repository; the
+                                    other 3 are managed by my groupmates.</p>
                                 <p class="mb-0">The registry's console can be seen below its GUI. You can see the
-                                    registry and services performing as specified, with registration, deregistration,
-                                    and heartbeats being sent from service to registry accordingly.</p>
+                                    registry and services performing as specified, with registration,
+                                    deregistration, and heartbeats being sent from service to registry accordingly.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-1 mt-4 col-6 d-none d-md-block d-lg-none d-xl-block">
+                        <div class="bg-light border border-primary rounded-3 shadow">
+                            <div class="p-4">
+                                <h3>Demo</h3>
+                                <p>Finally, here is a quick demo of the implementation of the architecture running
+                                    locally. I unfortunately only have microservice 1 and 2 on my repository; the
+                                    other 3 are managed by my groupmates.</p>
+                                <p class="mb-0">The registry's console can be seen below its GUI. You can see the
+                                    registry and services performing as specified, with registration,
+                                    deregistration, and heartbeats being sent from service to registry accordingly.
+                                </p>
                             </div>
                         </div>
                     </div>
