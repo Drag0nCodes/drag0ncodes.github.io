@@ -212,18 +212,19 @@
             <div class="resume-section-content">
                 <h2 class="mb-4">Time Series Prediction with Recurrent Neural Networks</h2>
                 <div class="subheading mb-3">Languages and Skills: Python, Artificial Neural Networks, PyTorch, Time
-                    Series Prediction, Data Analysis</div>
+                    Series Prediction, Data Analysis, Gcloud</div>
                 <p><a href="assets/CS4442 Final Report.pdf" target="_blank">Full report pdf</a></p>
                 <p>
                     <b>With this project, I set out to create an AI model to forecast the attendance at the campus
                         gym.</b>
                     During end of my third year, I started regularly going to the gym on campus. I eventually learned
                     that the staff post live attendance updates every 30 minutes on Twitter. After initially
-                    finding it difficult to tell whether 80 in the weight room meant busy or not as I had no prior frame
-                    of reference, I thought I would write a script to scrape as much of their tweet data as possible
-                    and then graph it. With the python package I was using, I could scrape the most recent ~800 tweets.
-                    Running this once a month for 8 months, I accumulated <a href="assets/RecOutput.txt"
-                        target="_blank">over 5000 tuples</a> from May 2nd, 2024 onward.
+                    finding it difficult to interpret the posts as busy or not, I thought I would write a script to
+                    scrape as much information from their tweets as possible and graph it. With the python package I was
+                    using, I could scrape the most recent ~800 tweets. Only able to scrape up to ~800 tweets in the
+                    past,
+                    I run the script once a month for 8 months and accumulated <a href="assets/RecOutput.txt"
+                        target="_blank">over 5000 datapoints</a>.
                 </p>
 
                 <!--Rec centre first image-->
@@ -239,13 +240,11 @@
                                 alt="Rec centre usage over time of day by the day of the week" src="assets/dotw.png"
                                 class="img-fluid d-sm-none rounded-top">
                             <h3 class="pt-3 px-3 p-md-0">Usage by Day of the Week</h3>
-                            <p class="pb-3 px-3 p-md-0 mb-0">I referred to this as my day of the week average
+                            <p class="pb-3 px-3 p-md-0 mb-0">I referred to this dataset as my day of the week average
                                 model because it took every data point for each day of the week and hour and then simply
-                                averaged them together. This is the data I was most interested in initially as it helped
-                                me pick the best day and time to go to the gym. Looking back, I probably could have just
-                                googled "what day is the gym least busy?" but that's beside the point. I ended up
-                                picking early afternoon on Sundays. I also had charts for each month separately so I
-                                could see how different months were more or less busy.</p>
+                                averaged them together. This data helped me pick the best day and time to go to the gym,
+                                mid-day Sunday. Looking back, I probably could have just googled "what day is the gym
+                                least busy?" but where's the fun in that?</p>
                         </div>
                     </div>
                 </div>
@@ -258,51 +257,48 @@
                     attendance readings and then predict each hour's attendance for the rest of the day.
                 </p>
                 <p>
-                    During my research and development, I discovered a previous student's attempt at solving my problem,
-                    which they referred to as <a href="https://x.com/westerngymbot" target="_blank">GyMBRo</a>, AKA Gym
-                    Monitoring By Robot. Clever name. Every day this bot would post a morning forecast graph on Twitter
-                    and, throughout the day, fetch tweets from the Rec Centre and plot those points to the graph. The
-                    issue I had with this implementation is that it did not adjust its prediction throughout the day,
-                    say if the gym were abnormally busy, which I planned to have mine do via inputting of the five
-                    points to make the forecast from. GyMBRo did, however, give me a good comparison for my forecasts
-                    and, when I found its source code, an additional 7 years of attendance data (50 000 tuples) to help
-                    with model training. Because good LSTM models are known to be very dependent on training with lots
-                    of data, I knew this was a big win. Thanks Demetri!
+                    During my research, I discovered a previous student's attempt at solving my problem,
+                    which they called <a href="https://x.com/westerngymbot" target="_blank">GyMBRo</a>, AKA Gym
+                    Monitoring By Robot. Clever name. Every day this bot would post a forecast on Twitter. The
+                    issue I had with this implementation is that it did not adjust its prediction throughout the day.
+                    I planned to have mine do this via the inputting of five points to make the forecast from. GyMBRo
+                    did, however, give me a good comparison for my forecasts and an additional 7 years of attendance
+                    data (50 000 tuples) to help with model training. Very useful because LSTM models are known to be
+                    very dependent on large training sets. Thanks Demetri!
                 </p>
                 <p>
-                    While keeping things concise here on my site, I engineered my labeled tuples to consist of 5
+                    Keeping things concise here on my site, I engineered my labeled tuples to consist of 5
                     features: the month (1-12), the week (0-52), the day (1-31), the hour (0-23), and the day of the
                     week (0-6). The label was the number of people in the weight room. This label would also be a
-                    feature when put back into the model to get the next prediction. I also added ~1000 tuples to my
-                    dataset with labels of '0' for then the gym was closed. After feature engineering, I took 80% of the
-                    days and saved them for training, 10% for validation, and the remaining 10% for testing. I then used
-                    PyTorch to train my LSTM model. I trained 100 epochs for each different variation of hyperparameters
-                    and saved the one with the best validation MSE. Then I chose the hyperparameter combination with
-                    the best test MSE. I ended up creating a model with a test MSE of 541.6. This is
-                    noticeably better than the MSE of my simple day of the week average model, which had a MSE of 752.2
-                    on the same test dataset. For more in-depth background information, methodology, results, and
-                    conclusions of my research, find my <a href="assets/CS4442 Final Report.pdf" target="_blank">full
-                        report here</a>.
+                    feature when used for making the next prediction. I also added tuples for when the gym was closed.
+                    After feature engineering, I separated 80% of the days for training, 10% for validation, and the
+                    remaining 10% for testing. I then used PyTorch to train my LSTM model. I tried several different
+                    hyperparameter tunings and trained 100 epochs for each variation of hyperparameters, saving the one
+                    with the best mean squared error (MSE) on the validation set. I ended up creating a model with a
+                    test MSE of 541.6. This is noticeably better than the MSE of my simple day of the week average
+                    model, which had a MSE of 752.2 on the same dataset. For more in-depth background information,
+                    methodology, results, and conclusions of my research, find my <a
+                        href="assets/CS4442 Final Report.pdf" target="_blank">full report here</a>.
                 </p>
 
                 <!--Hyperparam chart-->
                 <div class="row align-items-md-stretch mb-1 mt-4">
                     <div class="col-md-6 col-lg-12 col-xl-6 mb-4">
                         <div class="bg-light border border-primary rounded-3 shadow">
-                            <img title="Hyperparameter comparison chart" alt="Hyperparameter comparision chart"
+                            <img title="Hyperparameter comparison chart" alt="Hyperparameter comparison  chart"
                                 src="assets/tuning.png"
                                 class="img-fluid d-md-none d-lg-block d-xl-none rounded-top p-2">
                             <h3 class="pt-3 px-3 px-md-4 pt-md-4 pt-lg-3 pt-xl-4">Hyperparameter Tuning</h3>
-                            <p class="pb-3 px-3 px-md-4 mb-2">This chart shows my process of finding the right
-                                hyperparameters for training. The column in light green shows the best combination I
+                            <p class="pb-3 px-3 px-md-4 mb-2">This chart shows different hyperparameter combinations
+                                during training. The column in light green shows the best combination I
                                 found. Each other column has a grey value that differs from the best combination. The
-                                validation and test mean squared error can be seen for each combination at the bottom
-                                colour coded from green (best) to red (worst). Test also has root mean squared error.
+                                validation and test mean squared error for each combination at the bottom is
+                                colour coded as green (best) to red (worst). Root mean squared error is also included.
                             </p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-12 col-xl-6 mb-md-4">
-                        <img title="Hyperparameter comparision chart" alt="Hyperparameter comparision chart"
+                        <img title="Hyperparameter comparison  chart" alt="Hyperparameter comparison  chart"
                             src="assets/tuning.png"
                             class="rounded-3 bg-light img-fluid shadow border d-none d-md-block d-lg-none d-xl-block p-1">
                     </div>
@@ -311,18 +307,13 @@
                 <p>
                     After concluding my research, I learned lots about what it takes to create an AI model,
                     the necessary steps needed to format training and testing data, and how to communicate my findings.
-                    Ultimately, I considered my model a success. It preformed better than my previous attempts of simply
-                    averaging previous
-                    days' data and, often, I found the model to preform better the GyMBRo model. I did not find the
-                    model's performance at forecasting at the start of the day to be very
-                    accurate, before any attendance observations have been made. I think the model could be improved by
-                    adding more features, specifically for upcoming holidays and open/closed hours. As well, perhaps
-                    combining two models for a forecast would be beneficial. Using a different architecture to make a
-                    morning forecast could counteract the underestimating morning problem.
-                </p>
-                <p>
-                    To run my code on your own, find <a href="https://github.com/Drag0nCodes/RecCentreLSTM"
-                        target="_blank">my repo here</a> and run predict.py in the LSTM folder.
+                    Ultimately, I considered my model a success. It preformed better than my previous attempts of
+                    forecasting by averaging days' data, and, often, I found the model to preform better the GyMBRo
+                    model. I did not find the model's performance at forecasting from the start of the day to be very
+                    accurate. I think the model could be improved by adding more features, specifically for upcoming
+                    holidays and open/closed hours. As well, perhaps combining two models for a forecast would be
+                    beneficial. Using a different architecture to make a morning forecast could counteract the
+                    underestimating morning problem.
                 </p>
 
                 <!--Rec centre animated graph-->
@@ -340,34 +331,44 @@
                             <p class="pb-3 px-3 p-md-0 mb-0">This is an animation of many hourly forecasts for April
                                 18, 2023 throughout the day. The red line shows the prediction made by the model for the
                                 remainder of the day based on the 5-hour long input sequence in blue. The green line
-                                shows the actual attendance reported by Rec Centre staff. This green line is what the
-                                red prediction line should, in theory, match up or be very close to. Additionally, the
-                                MSE can also be seen for each prediction at the top. The initial morning performance is
-                                noticeably worse than later in the day.
+                                shows the actual attendance reported by Rec Centre staff. The red prediction line
+                                should, in theory, match up or be very close to the green line. Additionally, the
+                                MSE can also be seen for each prediction at the top.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!--Rec centre second graph-->
+                <p>
+                    To run my code on your own, find <a href="https://github.com/Drag0nCodes/RecCentreLSTM"
+                        target="_blank">my repo here</a> and run predict.py in the LSTM folder. You can also find my
+                    online forecasting app below. This app runs the model on a free Gcloud server, so its not always the
+                    fastest. The app also includes a helpful feature to fetch the most recent tweets from the Rec Centre
+                    to use them for a forecast.
+                </p>
+
+                <!--Rec centre app photo-->
                 <div class="row align-items-md-stretch mb-1 mt-4">
                     <div class="col-sm-6 mb-4">
                         <div class="p-sm-3 p-md-4 bg-light border border-primary rounded-3 shadow">
-                            <img title="Forecast for March 30 2023 at 11am" alt="Forecast for March 30 2023 at 11am"
-                                src="assets/Mar30_LSTM.png" class="img-fluid d-sm-none rounded-top">
-                            <h3 class="pt-3 px-3 p-sm-0">Poor Forecasts for March 30, 2023</h3>
-                            <p class="pb-3 px-3 p-sm-0 mb-0">Here you can see three predictions made for March 30, 2023.
-                                In black, my model's forecast made at 5 a.m. In red, my model's forecast made at 11 a.m.
-                                In orange, the average attendance for a Thursday in March. Green shows actual attendance
-                                observations. This day was abnormally busy, likely due to the end of the term
-                                approaching, and the forecasts were poor. The 11 a.m. forecast predicts a busier
-                                day overall, but converges on a normal day by closing, which was not correct.
+                            <a href="https://www.colinb.ca/RecCentreLSTM/app/" target="_blank"><img
+                                    title="Rec Centre Forecasting App" alt="Rec Centre Forecasting App"
+                                    src="assets/RecCentreApp.jpg" class="img-fluid d-sm-none rounded-top"></a>
+                            <h3 class="pt-3 px-3 p-sm-0">Forecasting App</h3>
+                            <p class="pb-3 px-3 p-sm-0 mb-0">
+                                With the <a href="https://www.colinb.ca/RecCentreLSTM/app/" target="_blank">online
+                                    forecasting app</a>, you can enter any date and 5 data points to create a
+                                forecast without needing to download and run the model on your own machine. When
+                                you click Generate Forecast, the app will send a request to a Gcloud compute instance
+                                running a python flask server with the LSTM model ready to handle the request. (Your
+                                first forecast may take some time to generate while the server warms up)
                             </p>
                         </div>
                     </div>
                     <div class="col-sm-6 mb-sm-4 d-none d-sm-block">
-                        <img title="Forecast for March 30 2023 at 11am" alt="Forecast for March 30 2023 at 11am"
-                            src="assets/Mar30_LSTM.png" class="rounded-3 border img-fluid shadow">
+                        <a href="https://www.colinb.ca/RecCentreLSTM/app/" target="_blank"><img
+                                title="Rec Centre Forecasting App" alt="Rec Centre Forecasting App"
+                                src="assets/RecCentreApp.jpg" class="rounded-3 border img-fluid shadow"></a>
                     </div>
                 </div>
             </div>
@@ -378,7 +379,7 @@
         <section class="resume-section" id="ServiceReg">
             <div class="resume-section-content">
                 <h2 class="mb-4">Service Registry</h2>
-                <div class="subheading mb-3">Languages and skills: Node.JS, HTTP, MySQL, HTML, CSS, JS, Cloud Servers,
+                <div class="subheading mb-3">Languages and skills: Node.JS, HTTP, MySQL, HTML, CSS, JS, AWS,
                     Teamwork</div>
                 <p>For the class project of CS4471: Requirement Analysis in my fourth year, my group was tasked with
                     creating a microservice-based system that would operate in a cloud environment. For this project, we
