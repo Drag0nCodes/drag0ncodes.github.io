@@ -1,673 +1,1176 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Colin Brown's Projects</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
-        type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../css/styles.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body id="page-top">
+  <body id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand" href="..">
-            <span class="d-block d-lg-none">Colin Brown</span>
-            <span class="d-none d-lg-block"><img title="Back to Resume" alt="Profile photo"
-                    class="img-fluid img-profile mx-auto mb-2" src="assets/profile.png" alt="..." /></span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-                class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#projects">My Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#MRC">My Record Collection</a></li>
-                <li class="nav-item"><a class="nav-link" href="#RecCentre">Time Series Prediction with RNNs</a></li>
-                <li class="nav-item"><a class="nav-link" href="#ServiceReg">Service Registry</a></li>
-                <li class="nav-item"><a class="nav-link" href="#BusSite">Business Website</a></li>
-                <li class="nav-item"><a class="nav-link" href="#GIS">GIS Project</a></li>
-            </ul>
-        </div>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+      id="sideNav"
+    >
+      <a class="navbar-brand" href="..">
+        <span class="d-block d-lg-none">Colin Brown</span>
+        <span class="d-none d-lg-block"
+          ><img
+            title="Back to Resume"
+            alt="Profile photo"
+            class="img-fluid img-profile mx-auto mb-2"
+            src="assets/profile.png"
+            alt="..."
+        /></span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">My Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#RecCentre"
+              >Time Series Prediction with RNNs</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#MRC2">My Record Collection v2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#MRC1">My Record Collection v1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ServiceReg">Service Registry</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#BusSite">Business Website</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#GIS">GIS Project</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Resume fixed button -->
     <div class="position-fixed bottom-0 end-0 m-3">
       <a class="btn btn-lg bg-primary text-white" role="button" href="..">
-          My Resume
+        My Resume
       </a>
     </div>
 
     <!-- Page Content-->
     <div class="container-fluid body-content p-0">
-        <!-- About-->
-        <section class="resume-section" id="projects">
-            <div class="resume-section-content">
-                <h1>
-                    My <span class="text-primary">Projects</span>
-                </h1>
-                <p class="lead"><b>Here you can take a look at some of the projects that I have worked on, either as
-                        personal projects or for school.</b></p>
-                <p class="lead mb-4">This site is also sort of a project of its own, I suppose. I started with a
-                    template
-                    that gave me the nav/sidebar and the rest was created by me. I made it fully
-                    responsive, so please resize your browser to see the elements change and reorganize to fit the
-                    window size. Also, my favourite project is <a href="#MRC">My Record Collection</a> so don't miss it.
-                </p>
+      <!-- About-->
+      <section class="resume-section" id="projects">
+        <div class="resume-section-content">
+          <h1>My <span class="text-primary">Projects</span></h1>
+          <p class="lead">
+            <b
+              >Here you can take a look at some of the projects that I have
+              worked on, either as personal projects or for school.</b
+            >
+          </p>
+          <p class="lead mb-4">
+            This site is also sort of a project of its own, I suppose. I started
+            with a template that gave me the nav/sidebar and the rest was
+            created by me. I made it fully responsive, so please resize your
+            browser to see the elements change and reorganize to fit the window
+            size. Also, my favourite project is
+            <a href="#MRC">My Record Collection</a> so don't miss it.
+          </p>
+        </div>
+      </section>
+
+      <hr class="m-0" />
+
+      <!--Rec centre stats section-->
+      <section class="resume-section" id="RecCentre">
+        <div class="resume-section-content">
+          <h2 class="mb-4">
+            Time Series Prediction with Recurrent Neural Networks
+          </h2>
+          <div class="mb-3">
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Python
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Artificial Neural Networks
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              PyTorch
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Time Series Prediction
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Data Analysis
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Google Cloud
+            </button>
+          </div>
+          <p>
+            <a href="assets/CS4442 Final Report.pdf" target="_blank"
+              >Full report pdf</a
+            >
+            <a
+              class="ms-2"
+              href="https://www.colinb.ca/RecCentreLSTM/app/"
+              target="_blank"
+              >Github Repo</a
+            >
+          </p>
+          <p>
+            <b
+              >With this project, I set out to create an AI model to forecast
+              the attendance at the campus gym.</b
+            >
+            During end of my third year, I started regularly going to the gym on
+            campus. I eventually learned that the staff post live attendance
+            updates every 30 minutes on Twitter. After initially finding it
+            difficult to interpret the posts as busy or not, I thought I would
+            write a script to scrape as much information from their tweets as
+            possible and graph it. With the python package I was using, I could
+            scrape the most recent ~800 tweets. Only able to scrape up to ~800
+            tweets in the past, I run the script once a month for 8 months and
+            accumulated
+            <a href="assets/RecOutput.txt" target="_blank"
+              >over 5000 datapoints</a
+            >.
+          </p>
+
+          <!--Rec centre first image-->
+          <div class="row align-items-md-stretch mb-1 mt-4">
+            <div class="col-sm-6 mb-sm-4 d-none d-sm-block">
+              <img
+                title="Rec centre usage over time of day by the day of the week"
+                alt="Rec centre usage over time of day by the day of the week"
+                src="assets/dotw.png"
+                class="rounded-3 bg-light img-fluid border shadow"
+              />
             </div>
-        </section>
-        <hr class="m-0" />
-
-        <!--MRC Section-->
-        <section class="resume-section" id="MRC">
-            <div class="resume-section-content">
-                <h2 class="mb-4">My Record Collection</h2>
-                <div class="mb-3">
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        C++
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        Qt
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        APIs
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        Multithreading
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        UX
-                    </button>
-                </div>
-                <img title="MRC Logo" alt="MRC Logo" src="assets/MRCLogo.png" class="float-end imgshadow m-3"
-                    style="height: 7em;" alt="">
-                <p><a href="https://github.com/Drag0nCodes/MyRecordCollection" target="_blank">My Record Collection
-                        (MRC)</a> is the first large project I have taken up on my own. Using knowledge I gained in and
-                    outside of class, I decided to try and solve a problem I found myself facing when I was trying to
-                    pick a record from my record collection that I wanted to listen to; I could not decide from my
-                    collection what record I was in the mood to hear. I found my collection of around 70 records to be
-                    quite daunting when I wanted to listen to music. Sometimes I would even just give up and do
-                    something else. What I wished for was an app where I could see all my records and sort them by their
-                    genres and my own personal rating that I had for them. And if you know much about music—no, Discogs
-                    is not quite what I was looking for. However, I eventually integrated it into my app in a way.</p>
-                <p>I had just finished my first term of third year and in my CS3307: Objected-Oriented Design and
-                    Analysis course, we were tasked with coming up with our own idea for a software and making it in
-                    C++. We came across the Qt development framework and used it to make an (admittedly not very great)
-                    music player with playlists and a queue called Spotishy. So, during the winter reading week, I got
-                    to work to solve my problem using Qt. I had a rough idea of what I wanted it to do. It should be
-                    able to search and find any record using an API, I used last.fm. It should be able to save and
-                    record from last.fm locally. The user should be able to give these local records a rating out of 10
-                    and any tag that they want. Finally, the user should be able to sort the collection by those ratings
-                    and tags.
+            <div class="col-sm-6 mb-4">
+              <div
+                class="p-md-4 bg-light border border-primary rounded-3 shadow"
+              >
+                <img
+                  title="Rec centre usage over time of day by the day of the week"
+                  alt="Rec centre usage over time of day by the day of the week"
+                  src="assets/dotw.png"
+                  class="img-fluid d-sm-none rounded-top"
+                />
+                <h3 class="pt-3 px-3 p-md-0">Usage by Day of the Week</h3>
+                <p class="pb-3 px-3 p-md-0 mb-0">
+                  I referred to this dataset as my day of the week average model
+                  because it took every data point for each day of the week and
+                  hour and then simply averaged them together. This data helped
+                  me pick the best day and time to go to the gym, mid-day
+                  Sunday. Looking back, I probably could have just googled "what
+                  day is the gym least busy?" but where's the fun in that?
                 </p>
-                <!--MRC first image 1.0.0-->
-                <div class="row align-items-md-stretch mb-1 mt-4">
-                    <div class="col-sm-6 mb-sm-4">
-                        <img title="The first version of MRC" alt="Photo of the first version of MRC"
-                            src="assets/MRC100.jpg" class="rounded-3 img-fluid shadow border d-none d-sm-block"
-                            onmouseover="">
-                    </div>
-                    <div class="col-sm-6 mb-4">
-                        <div class="p-sm-3 p-md-4 bg-light border border-primary rounded-3 shadow">
-                            <img title="The first version of MRC" alt="Photo of the first version of MRC"
-                                src="assets/MRC100.jpg" class="img-fluid d-sm-none rounded-top">
-                            <h3 class="pt-3 px-3 p-sm-0">MRC 1.0.0</h3>
-                            <p class="pb-3 px-3 p-sm-0 mb-0">This is what I ended up with for my first (mostly) working
-                                version of the app. It got the basics of what I wanted it to be able to do down. Adding
-                                record, tags, and ratings. I found myself actually wanting to use the app to pick what
-                                to listen to and I even started listening to my records more. I considered it a success.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <p>Over the course of about half a year I continued to make incremental updates to the app with feedback
-                    from friends that saw and used the app and adding things I wanted it to be able to do. Below are
-                    features I added with each minor version increment.</p>
-                <!--MRC version table-->
-                <div class="row bg-light shadow mx-1 my-4 border border-primary">
-                    <div class="col-sm-6 col-md-3 col-lg-6 col-xl-3 border p-3 p-md-4">
-                        <h3>v1.1.0</h3>
-                        <ul class="mb-lg-1">
-                            <li>Suggested tags from genres on Wikipedia</li>
-                            <li>Themes (dark and light)</li>
-                            <li>Record counter</li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-lg-6 col-xl-3 border p-3 p-md-4">
-                        <h3>v1.2.0</h3>
-                        <ul class="mb-lg-1">
-                            <li>Import Discogs collection (multi-threaded)</li>
-                            <li>Saved preferences</li>
-                            <li>Checkmarks in tag menus</li>
-                            <li>Delete all records and tags</li>
-                            <li>Reset filters</li>
-                            <li>Pick a record for me</li>
-                            <li>About and contact info</li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-lg-6 col-xl-3 border p-3 p-md-4">
-                        <h3>v1.3.0</h3>
-                        <ul class="mb-lg-1">
-                            <li>Edit record attributes</li>
-                            <li>Create a custom record</li>
-                            <li>Progress bar for Discogs import</li>
-                            <li>Tag count in filter list</li>
-                            <li>Export data</li>
-                            <li>Filter by rating</li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-lg-6 col-xl-3 border p-3 p-md-4">
-                        <h3>v1.4.0</h3>
-                        <ul class="mb-lg-1">
-                            <li>Added "Released" and "Date Added" attributes</li>
-                            <li>Resizable window</li>
-                            <li>Hide columns from record table</li>
-                        </ul>
-                    </div>
-                </div>
-                <p>After v1.4.0, I felt like I was mostly "done" so I spent some time figuring out how to compile the
-                    app on a Mac so I could give my Mac user friends a version they could use. Plus, I made some minor
-                    adjustments here and there that I wanted that didn't feel major. I made some performance
-                    improvements through threading and grouping elements, I added a loading animation for album covers,
-                    I improved the "sort by" dropdown to be less confusing, and finally I made a few big fixes.</p>
-                <!--MRC second image 1.4.5-->
-                <div class="row align-items-md-stretch mb-1 mt-4">
-                    <div class="col-sm-6 mb-4">
-                        <div class="p-sm-3 p-md-4 bg-light border border-primary rounded-3 shadow">
-                            <img title="The most recent version of MRC" alt="Photo of the most recent version of MRC"
-                                src="assets/MRC145.jpg" class="img-fluid d-sm-none rounded-top">
-                            <h3 class="pt-3 px-3 p-sm-0">MRC 1.4.5</h3>
-                            <p class="pb-3 px-3 p-sm-0 mb-0">MRC 1.4.5 is where I am currently at now with the app. I
-                                really like it, I use it all the time, and I always keep my collection up-to-date. Check
-                                out <a href="https://github.com/Drag0nCodes/MyRecordCollection/releases/tag/v1.4.5"
-                                    target="_blank">this version here</a> to download and try it out. Just download the
-                                zipped "Source code" and run the precomplied app in the "My Record Collection-xxx"
-                                folder that matches your OS. To use the app, all you need is the folder matching your
-                                OS.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 mb-sm-4 d-none d-sm-block">
-                        <img title="The most recent version of MRC" alt="Photo of the most recent version of MRC"
-                            src="assets/MRC145.jpg" class="rounded-3 border img-fluid shadow">
-                    </div>
-                </div>
-                <p>I don't currently have many other plans for it. I've thought about adding some kind of data
-                    analysis/graphing feature to show a user's collection in another way kind of Spotify Wrapped-esque
-                    because I especially like currently being able to see how many records of each genre I have as I
-                    find it interesting. I also think it would be really cool if the app was able to be an online
-                    service
-                    that had user data stored in the cloud, and you could sign in to it from any device and it synced
-                    across devices, but that's for v2.0.0 if it ever comes to fruition.
-                </p>
-                <div class="row mt-4">
-                    <div class="col-6 col-md-4 col-lg-6 col-xl-4 mb-4 mb-md-0 mb-lg-4 mb-xl-0">
-                        <img title="Part of my record collection" alt="Part of my record collection"
-                            src="assets/collection1.jpg" class="rounded-3 border img-fluid shadow">
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-6 col-xl-4 mb-4 mb-md-0 mb-lg-4 mb-xl-0">
-                        <img title="The other part of my record collection" alt="The other part of my record collection"
-                            src="assets/collection2.jpg" class="rounded-3 border img-fluid shadow">
-                    </div>
-                    <div class="col-12 col-md-4 col-lg-12 col-xl-4">
-                        <div class="p-3 p-md-4 bg-light border border-primary rounded-3 shadow">
-                            <h3>My Collection</h3>
-                            <p class="mb-0">As a bonus, here is my physical collection. On the left are the records I
-                                listen to most and on the right, the least</p>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </section>
-        <hr class="m-0" />
+          </div>
 
-        <!--Rec centre stats section-->
-        <section class="resume-section" id="RecCentre">
-            <div class="resume-section-content">
-                <h2 class="mb-4">Time Series Prediction with Recurrent Neural Networks</h2>
-                <div class="mb-3">
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        Python
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        Artificial Neural Networks
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        PyTorch
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        Time Series Prediction
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        Data Analysis
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        Google Cloud
-                    </button>
-                </div>
-                <p><a href="assets/CS4442 Final Report.pdf" target="_blank">Full report pdf</a></p>
-                <p>
-                    <b>With this project, I set out to create an AI model to forecast the attendance at the campus
-                        gym.</b>
-                    During end of my third year, I started regularly going to the gym on campus. I eventually learned
-                    that the staff post live attendance updates every 30 minutes on Twitter. After initially
-                    finding it difficult to interpret the posts as busy or not, I thought I would write a script to
-                    scrape as much information from their tweets as possible and graph it. With the python package I was
-                    using, I could scrape the most recent ~800 tweets. Only able to scrape up to ~800 tweets in the
-                    past,
-                    I run the script once a month for 8 months and accumulated <a href="assets/RecOutput.txt"
-                        target="_blank">over 5000 datapoints</a>.
+          <p>
+            Quickly, I realized I wanted to do more with the data I was
+            accumulating. So, for my AI 2 final project, I challenged myself to
+            learn about recurrent neural networks and create a long short-term
+            memory (LSTM) model that could perform time series prediction and
+            forecast how many people there would be at the gym on any given day.
+            It would do this by taking as input the previous five hours of
+            attendance readings and then predict each hour's attendance for the
+            rest of the day.
+          </p>
+          <p>
+            During my research, I discovered a previous student's attempt at
+            solving my problem, which they called
+            <a href="https://x.com/westerngymbot" target="_blank">GyMBRo</a>,
+            AKA Gym Monitoring By Robot. Clever name. Every day this bot would
+            post a forecast on Twitter. The issue I had with this implementation
+            is that it did not adjust its prediction throughout the day. I
+            planned to have mine do this via the inputting of five points to
+            make the forecast from. GyMBRo did, however, give me a good
+            comparison for my forecasts and an additional 7 years of attendance
+            data (50 000 tuples) to help with model training. Very useful
+            because LSTM models are known to be very dependent on large training
+            sets. Thanks Demetri!
+          </p>
+          <p>
+            Keeping things concise here on my site, I engineered my labeled
+            tuples to consist of 5 features: the month (1-12), the week (0-52),
+            the day (1-31), the hour (0-23), and the day of the week (0-6). The
+            label was the number of people in the weight room. This label would
+            also be a feature when used for making the next prediction. I also
+            added tuples for when the gym was closed. After feature engineering,
+            I separated 80% of the days for training, 10% for validation, and
+            the remaining 10% for testing. I then used PyTorch to train my LSTM
+            model. I tried several different hyperparameter tunings and trained
+            100 epochs for each variation of hyperparameters, saving the one
+            with the best mean squared error (MSE) on the validation set. I
+            ended up creating a model with a test MSE of 541.6. This is
+            noticeably better than the MSE of my simple day of the week average
+            model, which had a MSE of 752.2 on the same dataset. For more
+            in-depth background information, methodology, results, and
+            conclusions of my research, find my
+            <a href="assets/CS4442 Final Report.pdf" target="_blank"
+              >full report here</a
+            >.
+          </p>
+
+          <!--Hyperparam chart-->
+          <div class="row align-items-md-stretch mb-1 mt-4">
+            <div class="col-md-6 col-lg-12 col-xl-6 mb-4">
+              <div class="bg-light border border-primary rounded-3 shadow">
+                <img
+                  title="Hyperparameter comparison chart"
+                  alt="Hyperparameter comparison  chart"
+                  src="assets/tuning.png"
+                  class="img-fluid d-md-none d-lg-block d-xl-none rounded-top p-2"
+                />
+                <h3 class="pt-3 px-3 px-md-4 pt-md-4 pt-lg-3 pt-xl-4">
+                  Hyperparameter Tuning
+                </h3>
+                <p class="pb-3 px-3 px-md-4 mb-2">
+                  This chart shows different hyperparameter combinations during
+                  training. The column in light green shows the best combination
+                  I found. Each other column has a grey value that differs from
+                  the best combination. The validation and test mean squared
+                  error for each combination at the bottom is colour coded as
+                  green (best) to red (worst). Root mean squared error is also
+                  included.
                 </p>
-
-                <!--Rec centre first image-->
-                <div class="row align-items-md-stretch mb-1 mt-4">
-                    <div class="col-sm-6 mb-sm-4 d-none d-sm-block">
-                        <img title="Rec centre usage over time of day by the day of the week"
-                            alt="Rec centre usage over time of day by the day of the week" src="assets/dotw.png"
-                            class="rounded-3 bg-light img-fluid border shadow">
-                    </div>
-                    <div class="col-sm-6 mb-4">
-                        <div class="p-md-4 bg-light border border-primary rounded-3 shadow">
-                            <img title="Rec centre usage over time of day by the day of the week"
-                                alt="Rec centre usage over time of day by the day of the week" src="assets/dotw.png"
-                                class="img-fluid d-sm-none rounded-top">
-                            <h3 class="pt-3 px-3 p-md-0">Usage by Day of the Week</h3>
-                            <p class="pb-3 px-3 p-md-0 mb-0">I referred to this dataset as my day of the week average
-                                model because it took every data point for each day of the week and hour and then simply
-                                averaged them together. This data helped me pick the best day and time to go to the gym,
-                                mid-day Sunday. Looking back, I probably could have just googled "what day is the gym
-                                least busy?" but where's the fun in that?</p>
-                        </div>
-                    </div>
-                </div>
-
-                <p>
-                    Quickly, I realized I wanted to do more with the data I was accumulating. So, for my AI 2 final
-                    project, I challenged myself to learn about recurrent neural networks and create a long short-term
-                    memory (LSTM) model that could perform time series prediction and forecast how many people there
-                    would be at the gym on any given day. It would do this by taking as input the previous five hours of
-                    attendance readings and then predict each hour's attendance for the rest of the day.
-                </p>
-                <p>
-                    During my research, I discovered a previous student's attempt at solving my problem,
-                    which they called <a href="https://x.com/westerngymbot" target="_blank">GyMBRo</a>, AKA Gym
-                    Monitoring By Robot. Clever name. Every day this bot would post a forecast on Twitter. The
-                    issue I had with this implementation is that it did not adjust its prediction throughout the day.
-                    I planned to have mine do this via the inputting of five points to make the forecast from. GyMBRo
-                    did, however, give me a good comparison for my forecasts and an additional 7 years of attendance
-                    data (50 000 tuples) to help with model training. Very useful because LSTM models are known to be
-                    very dependent on large training sets. Thanks Demetri!
-                </p>
-                <p>
-                    Keeping things concise here on my site, I engineered my labeled tuples to consist of 5
-                    features: the month (1-12), the week (0-52), the day (1-31), the hour (0-23), and the day of the
-                    week (0-6). The label was the number of people in the weight room. This label would also be a
-                    feature when used for making the next prediction. I also added tuples for when the gym was closed.
-                    After feature engineering, I separated 80% of the days for training, 10% for validation, and the
-                    remaining 10% for testing. I then used PyTorch to train my LSTM model. I tried several different
-                    hyperparameter tunings and trained 100 epochs for each variation of hyperparameters, saving the one
-                    with the best mean squared error (MSE) on the validation set. I ended up creating a model with a
-                    test MSE of 541.6. This is noticeably better than the MSE of my simple day of the week average
-                    model, which had a MSE of 752.2 on the same dataset. For more in-depth background information,
-                    methodology, results, and conclusions of my research, find my <a
-                        href="assets/CS4442 Final Report.pdf" target="_blank">full report here</a>.
-                </p>
-
-                <!--Hyperparam chart-->
-                <div class="row align-items-md-stretch mb-1 mt-4">
-                    <div class="col-md-6 col-lg-12 col-xl-6 mb-4">
-                        <div class="bg-light border border-primary rounded-3 shadow">
-                            <img title="Hyperparameter comparison chart" alt="Hyperparameter comparison  chart"
-                                src="assets/tuning.png"
-                                class="img-fluid d-md-none d-lg-block d-xl-none rounded-top p-2">
-                            <h3 class="pt-3 px-3 px-md-4 pt-md-4 pt-lg-3 pt-xl-4">Hyperparameter Tuning</h3>
-                            <p class="pb-3 px-3 px-md-4 mb-2">This chart shows different hyperparameter combinations
-                                during training. The column in light green shows the best combination I
-                                found. Each other column has a grey value that differs from the best combination. The
-                                validation and test mean squared error for each combination at the bottom is
-                                colour coded as green (best) to red (worst). Root mean squared error is also included.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-12 col-xl-6 mb-md-4">
-                        <img title="Hyperparameter comparison  chart" alt="Hyperparameter comparison  chart"
-                            src="assets/tuning.png"
-                            class="rounded-3 bg-light img-fluid shadow border d-none d-md-block d-lg-none d-xl-block p-1">
-                    </div>
-                </div>
-
-                <p>
-                    After concluding my research, I learned lots about what it takes to create an AI model,
-                    the necessary steps needed to format training and testing data, and how to communicate my findings.
-                    Ultimately, I considered my model a success. It preformed better than my previous attempts of
-                    forecasting by averaging days' data, and, often, I found the model to preform better the GyMBRo
-                    model. I did not find the model's performance at forecasting from the start of the day to be very
-                    accurate. I think the model could be improved by adding more features, specifically for upcoming
-                    holidays and open/closed hours. As well, perhaps combining two models for a forecast would be
-                    beneficial. Using a different architecture to make a morning forecast could counteract the
-                    underestimating morning problem.
-                </p>
-
-                <!--Rec centre animated graph-->
-                <div class="row align-items-md-stretch mb-1 mt-4">
-                    <div class="col-sm-6 mb-md-4">
-                        <img title="Animated Forecast for April 18, 2023" alt="Animated Forecast for April 18, 2023"
-                            src="assets/Apr18_LSTMAnimated.gif"
-                            class="rounded-3 bg-light img-fluid shadow border d-none d-sm-block">
-                    </div>
-                    <div class="col-sm-6 mb-4">
-                        <div class="p-md-4 bg-light border border-primary rounded-3 shadow">
-                            <img title="Animated Forecast for April, 18 2023" alt="Animated Forecast for April, 18 2023"
-                                src="assets/Apr18_LSTMAnimated.gif" class="img-fluid d-sm-none rounded-top">
-                            <h3 class="pt-3 px-3 p-md-0">Animated Forecast for April 18, 2023</h3>
-                            <p class="pb-3 px-3 p-md-0 mb-0">This is an animation of many hourly forecasts for April
-                                18, 2023 throughout the day. The red line shows the prediction made by the model for the
-                                remainder of the day based on the 5-hour long input sequence in blue. The green line
-                                shows the actual attendance reported by Rec Centre staff. The red prediction line
-                                should, in theory, match up or be very close to the green line. Additionally, the
-                                MSE can also be seen for each prediction at the top.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <p>
-                    To run my code on your own, find <a href="https://github.com/Drag0nCodes/RecCentreLSTM"
-                        target="_blank">my repo here</a> and run predict.py in the LSTM folder. You can also find my
-                    online forecasting app below. This app runs the model on a free Gcloud server, so its not always the
-                    fastest. The app also includes a helpful feature to fetch the most recent tweets from the Rec Centre
-                    to use them for a forecast.
-                </p>
-
-                <!--Rec centre app photo-->
-                <div class="row align-items-md-stretch mb-1 mt-4">
-                    <div class="col-sm-6 mb-4">
-                        <div class="p-sm-3 p-md-4 bg-light border border-primary rounded-3 shadow">
-                            <a href="https://www.colinb.ca/RecCentreLSTM/app/" target="_blank"><img
-                                    title="Rec Centre Forecasting App" alt="Rec Centre Forecasting App"
-                                    src="assets/RecCentreApp.jpg" class="img-fluid d-sm-none rounded-top"></a>
-                            <h3 class="pt-3 px-3 p-sm-0">Forecasting App</h3>
-                            <p class="pb-3 px-3 p-sm-0 mb-0">
-                                With the <a href="https://www.colinb.ca/RecCentreLSTM/app/" target="_blank">online
-                                    forecasting app</a>, you can enter any date and 5 data points to create a
-                                forecast without needing to download and run the model on your own machine. When
-                                you click Generate Forecast, the app will send a request to a Gcloud compute instance
-                                running a python flask server with the LSTM model ready to handle the request. (Your
-                                first forecast may take some time to generate while the server warms up)
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 mb-sm-4 d-none d-sm-block">
-                        <a href="https://www.colinb.ca/RecCentreLSTM/app/" target="_blank"><img
-                                title="Rec Centre Forecasting App" alt="Rec Centre Forecasting App"
-                                src="assets/RecCentreApp.jpg" class="rounded-3 border img-fluid shadow"></a>
-                    </div>
-                </div>
+              </div>
             </div>
-        </section>
-        <hr class="m-0" />
+            <div class="col-md-6 col-lg-12 col-xl-6 mb-md-4">
+              <img
+                title="Hyperparameter comparison  chart"
+                alt="Hyperparameter comparison  chart"
+                src="assets/tuning.png"
+                class="rounded-3 bg-light img-fluid shadow border d-none d-md-block d-lg-none d-xl-block p-1"
+              />
+            </div>
+          </div>
 
-        <!--4471 Service registry section-->
-        <section class="resume-section" id="ServiceReg">
-            <div class="resume-section-content">
-                <h2 class="mb-4">Service Registry</h2>
-                <div class="mb-3">
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        Node.JS
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        HTTP
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        MySQL
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        HTML
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        CSS
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        JS
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        AWS
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        Teamwork
-                    </button>
-                </div>
-                <p>For the class project of CS4471: Requirement Analysis in my fourth year, my group was tasked with
-                    creating a microservice-based system that would operate in a cloud environment. For this project, we
-                    were required to create a service registry that manages service registrations and maintains an
-                    inventory of available services, a service consumer (a front-end application) that enables users to
-                    discover registered services through a GUI, and multiple services designed as loosely coupled and
-                    independently deployable microservices capable of communicate with the registry through HTTP, AMQP,
-                    or gRPC. You can view the <a href="assets/4471_Project_Desc.pdf" target="_blank">project description
-                        here</a>.</p>
-                <p>We decided to code our registry with Node.JS, use MySQL for its database, AWS for cloud hosting, and
-                    HTTP requests to enable communication between the registry and services. We then had to identify
-                    functional, quality, and architecturally significant requirements (ASRs) of the registry and each
-                    service to guide our approach in developing the system's architecture. I was assigned to create
-                    the architecture diagrams, identify ASRs, and implement the registry and the first two
-                    microservices. As part of my implementation, I provided a Node.JS file to help my groupmates easily
-                    connect their services to the registry. <a href="assets/4471_Final_Report.pdf" target="_blank">Find
-                        our full final report here</a> and <a
-                        href="https://github.com/Drag0nCodes/Group_3_Service_Registry" target="_blank">the
-                        implementation code here</a>.
+          <p>
+            After concluding my research, I learned lots about what it takes to
+            create an AI model, the necessary steps needed to format training
+            and testing data, and how to communicate my findings. Ultimately, I
+            considered my model a success. It preformed better than my previous
+            attempts of forecasting by averaging days' data, and, often, I found
+            the model to preform better the GyMBRo model. I did not find the
+            model's performance at forecasting from the start of the day to be
+            very accurate. I think the model could be improved by adding more
+            features, specifically for upcoming holidays and open/closed hours.
+            As well, perhaps combining two models for a forecast would be
+            beneficial. Using a different architecture to make a morning
+            forecast could counteract the underestimating morning problem.
+          </p>
+
+          <!--Rec centre animated graph-->
+          <div class="row align-items-md-stretch mt-4">
+            <div class="col-sm-6 mb-md-4">
+              <img
+                title="Animated Forecast for April 18, 2023"
+                alt="Animated Forecast for April 18, 2023"
+                src="assets/Apr18_LSTMAnimated.gif"
+                class="rounded-3 bg-light img-fluid shadow border d-none d-sm-block"
+              />
+            </div>
+            <div class="col-sm-6 mb-4">
+              <div
+                class="p-md-4 bg-light border border-primary rounded-3 shadow"
+              >
+                <img
+                  title="Animated Forecast for April, 18 2023"
+                  alt="Animated Forecast for April, 18 2023"
+                  src="assets/Apr18_LSTMAnimated.gif"
+                  class="img-fluid d-sm-none rounded-top"
+                />
+                <h3 class="pt-3 px-3 p-md-0">
+                  Animated Forecast for April 18, 2023
+                </h3>
+                <p class="pb-3 px-3 p-md-0 mb-0">
+                  This is an animation of many hourly forecasts for April 18,
+                  2023 throughout the day. The red line shows the prediction
+                  made by the model for the remainder of the day based on the
+                  5-hour long input sequence in blue. The green line shows the
+                  actual attendance reported by Rec Centre staff. The red
+                  prediction line should, in theory, match up or be very close
+                  to the green line. Additionally, the MSE can also be seen for
+                  each prediction at the top.
                 </p>
-                <div class="row">
-                    <!--4471 first image group-->
-                    <div class="mb-1 mt-4 col-md-6 col-lg-12 col-xxl-6">
-                        <div class="bg-light border border-primary rounded-3 shadow p-3 p-md-4">
-                            <div class="text-center mb-3">
-                                <img title="Overall system architecture" alt="Overall system architecture"
-                                    src="assets/4471_arch.png" class="img-fluid rounded-top">
-                            </div>
-                            <h3>Overall System Architecture</h3>
-                            <p>Our system architecture consisted of three modules: one for the microservices, one for
-                                the registry, and one for the registry database. The microservice modules would be able
-                                to send heartbeats to the registry every 15 seconds, letting it know the microservice
-                                remained available, send register or deregister requests to the registry, and provide a
-                                unique function for the user.</p>
-                            <p>For the backend the registry processed those POST requests made by the microservices and
-                                ensured the database remained up to date. If it did not receive a heartbeat from a
-                                microservice for 35 seconds, it would mark the microservice as unavailable. For the
-                                front end, the registry provided a GUI for users as a webpage along with another method
-                                to fetch the currently registered microservices. The webpage would use this information
-                                to update its list every few seconds.</p>
-                            <p class="mb-0">The final module, the database, was implemented with MySQL and stored all
-                                necessary information about each registered microservice, such as the ID, name, URL,
-                                status, and timestamp of the last heartbeat.</p>
-                        </div>
-                    </div>
-                    <!--4471 second image group-->
-                    <div class="mb-1 mt-4 col-md-6 col-lg-12 col-xxl-6">
-                        <div class="bg-light border border-primary rounded-3 shadow p-3 p-md-4">
-                            <div class="text-center row mb-3">
-                                <div class="col-sm-6 col-md-12 col-lg-6 col-xxl-12">
-                                    <p>Context Diagram</p>
-                                    <img title="Architecture context diagram" alt="Architecture context diagram"
-                                        src="assets/4471_context.png"
-                                        class="img-fluid rounded-top mb-3 mb-sm-0 mb-md-3 mb-lg-0 mb-xxl-3">
-                                </div>
-                                <hr class="m-0 mb-3 d-block d-sm-none d-md-block d-lg-none d-xxl-block" />
-                                <div class="col-sm-6 col-md-12 col-lg-6 col-xxl-12">
-                                    <p>Component Diagram</p>
-                                    <img title="Architecture component-and-connector diagram"
-                                        alt="Architecture component-and-connector diagram" src="assets/4471_cc.png"
-                                        class="img-fluid rounded-top">
-                                </div>
-                            </div>
-                            <h3>A Couple More Diagrams</h3>
-                            <p>The first diagram illustrates the context in which the architecture would be deployed.
-                            </p>
-                            <p class="mb-0">The second diagram is a component-and-connector diagram, showing how the
-                                modules of the architecture interact, which modules provide interfaces, and which
-                                require them.</p>
-                        </div>
-                    </div>
-                    <!--4471 demo video-->
-                    <div class="mb-1 mt-4 col-md-6 col-lg-12 col-xl-6">
-                        <div class="bg-light border border-primary rounded-3 shadow">
-                            <video class="rounded-3 w-100 d-block" controls>
-                                <source src="assets/4471_demo.mp4" type="video/mp4">
-                            </video>
-                            <div class="p-3 px-lg-4 pb-lg-4 d-md-none d-lg-block d-xl-none">
-                                <h3>Demo</h3>
-                                <p>Finally, here is a quick demo of the implementation of the architecture running
-                                    locally. I unfortunately only have microservice 1 and 2 on my repository; the
-                                    other 3 are managed by my groupmates.</p>
-                                <p class="mb-0">The registry's console can be seen below its GUI. You can see the
-                                    registry and services performing as specified, with registration,
-                                    deregistration, and heartbeats being sent from service to registry accordingly.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-1 mt-4 col-6 d-none d-md-block d-lg-none d-xl-block">
-                        <div class="bg-light border border-primary rounded-3 shadow">
-                            <div class="p-4">
-                                <h3>Demo</h3>
-                                <p>Finally, here is a quick demo of the implementation of the architecture running
-                                    locally. I unfortunately only have microservice 1 and 2 on my repository; the
-                                    other 3 are managed by my groupmates.</p>
-                                <p class="mb-0">The registry's console can be seen below its GUI. You can see the
-                                    registry and services performing as specified, with registration,
-                                    deregistration, and heartbeats being sent from service to registry accordingly.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
-        <hr class="m-0" />
-
-        <!--2033 Business Site Section-->
-        <section class="resume-section" id="BusSite">
-            <div class="resume-section-content">
-                <h2 class="mb-4">Business Website</h2>
-                <div class="mb-3">
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        HTML
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        CSS
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        JavaScript
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        Bootstrap
-                    </button>
-                </div>
-                <p>The final project of CS2033: Multimedia & Communication II in my fourth year required us to
-                    individually create a responsive, interactive, informative, and attractive website for a fake
-                    business of our choice. As you might have guessed by now, I am an avid record collector, so I chose
-                    to make a website for a record store.</p>
-                <p class="mb-0">Some of the requirements for the site were as follows:</p>
-                <ul>
-                    <li>Single page</li>
-                    <li>Enhanced parallax</li>
-                    <li>ScrollFire</li>
-                    <li>Day specific messages</li>
-                    <li>CSS animation</li>
-                    <li>CSS transition</li>
-                    <li>Tiled background</li>
-                    <li>Back to top button</li>
-                    <li>At least 4 products</li>
-                    <li>Form modification and validation</li>
-                </ul>
-                <p>I learned a lot from this course and its prerequisite, lessons I have applied to create this site
-                    showcasing myself and my projects.</p>
-                <h4>Check out the <a href="2033_business/">business' site</a></h4>
-                <!--2033 Images-->
-                <div class="row align-items-md-stretch mt-4">
-                    <div class="col-sm-6 mb-4 mb-md-0">
-                        <img title="About section of business website" alt="About section of business website"
-                            src="assets/2033_about.jpg" class="rounded-3 img-fluid shadow border">
-                    </div>
-                    <div class="col-sm-6">
-                        <img title="Products section of business website" alt="Products section of business website"
-                            src="assets/2033_products.jpg" class="rounded-3 img-fluid shadow border">
-                    </div>
-                </div>
+              </div>
             </div>
-        </section>
-        <hr class="m-0" />
+          </div>
 
-        <!--2212 GIS Project-->
-        <section class="resume-section" id="GIS">
-            <div class="resume-section-content">
-                <h2 class="mb-4">GIS Project</h2>
-                <div class="mb-3">
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        Java
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        UI
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        Git
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        Atlassian Suite
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        Unit Testing
-                    </button>
-                    <button type="button" class="skill btn btn-primary disabled py-1 mb-1">
-                        Teamwork
-                    </button>
-                </div>
-                <p>For CS2212: Introduction to Software Engineering in my second year, I participated in my first
-                    computer science group project. It was my first experience coding on a team, requiring us to develop
-                    a unified idea of a codebase and deal with version control collaboratively. To stay organized, we
-                    used the Atlassian suite of software.</p>
-                <p>For the project, we needed to create a geographic information system (GIS) covering three buildings
-                    on campus. The system needed to include premade informational POIs on the map as well as
-                    functionality for user-created POIs. We were required to use Java and were encouraged to use
-                    NetBeans for its drag-and-drop UI creator. Additionally, we wrote unit tests for the code using
-                    JUnit.</p>
-                <div class="row align-items-md-stretch mb-1 mt-4">
-                    <div class="col-md-6 col-lg-12 col-xl-6 mb-4">
-                        <div class="bg-light border border-primary rounded-3 shadow">
-                            <img title="GIS project GUI" alt="GIS project GUI" src="assets/2212_GIS.jpg"
-                                class="img-fluid d-md-none d-lg-block d-xl-none rounded-top">
-                            <div class="p-3 p-md-4">
-                                <h3>The Application</h3>
-                                <p>This is how our project appeared when a user selected a user-created POI and chose to
-                                    edit it. You can see on the right all of the POI's data fields that you could
-                                    change, and below that, the current weather on campus. Additionally, the right panel
-                                    (not shown) included options to toggle different layers of POIs and a user favorites
-                                    list.</p>
-                                <p class="mb-0">In the middle-top section, you can see a list of all existing POIs, and
-                                    below that is information about the selected POI. On the left, you have the map,
-                                    which you can scroll around to view the entire floor.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-sm-4 d-none d-md-block d-lg-none d-xl-block">
-                        <img title="GIS project GUI" alt="GIS project GUI" src="assets/2212_GIS.jpg"
-                            class="rounded-3 img-fluid border shadow">
-                    </div>
-                </div>
+          <!--Rec centre app photo-->
+          <div class="row align-items-md-stretch mb-1 mt-2">
+            <div class="col-sm-6 mb-4">
+              <div
+                class="p-sm-3 p-md-4 bg-light border border-primary rounded-3 shadow"
+              >
+                <a
+                  href="https://www.colinb.ca/RecCentreLSTM/app/"
+                  target="_blank"
+                  ><img
+                    title="Rec Centre Forecasting App"
+                    alt="Rec Centre Forecasting App"
+                    src="assets/RecCentreApp.jpg"
+                    class="img-fluid d-sm-none rounded-top"
+                /></a>
+                <h3 class="pt-3 px-3 p-sm-0">Forecasting App</h3>
+                <p class="pb-3 px-3 p-sm-0 mb-0">
+                  With the , you can enter any date and 5 data points to create
+                  a forecast without needing to download and run the model on
+                  your own machine. When you click Generate Forecast, the app
+                  will send a request to a Google Cloud compute instance running
+                  a python flask server with the LSTM model ready to handle the
+                  request. (Your first forecast may take some time)
+                </p>
+              </div>
             </div>
-        </section>
+            <div class="col-sm-6 mb-sm-4 d-none d-sm-block">
+              <a href="https://www.colinb.ca/RecCentreLSTM/app/" target="_blank"
+                ><img
+                  title="Rec Centre Forecasting App"
+                  alt="Rec Centre Forecasting App"
+                  src="assets/RecCentreApp.jpg"
+                  class="rounded-3 border img-fluid shadow"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="m-0" />
+
+      <!--MRC2 Section-->
+      <section class="resume-section" id="MRC2">
+        <div class="resume-section-content">
+          <h2 class="mb-4">My Record Collection v2</h2>
+          <div class="mb-3">
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              React
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              TypeScript
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Node.JS
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Express
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Google Cloud
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              MySQL
+            </button>
+          </div>
+          <img
+            title="MRC Logo"
+            alt="MRC Logo"
+            src="assets/MRCLogo.png"
+            class="float-end imgshadow m-3"
+            style="height: 7em"
+            alt=""
+          />
+          <p>
+            Using knowledge I gained in and outside of class, I solved a problem
+            I found myself facing when I wanted to listen to music; I could not
+            decide what record from my vinyl collection I was in the mood to
+            hear. I found my collection of only around 70 records to be quite
+            daunting to pick from. So much so that sometimes I would skip trying
+            to play a record altogether. What I wished for was an app where I
+            could see all my records easily and sort them by their genres and
+            other attributes I wanted for them.
+          </p>
+          <p>
+            I solved my problem by creating My Record Collection v1, but after
+            using it for a while, I realized that I wanted something better. I
+            wanted to improve the user experience, connect it to a backend
+            server, add more features, and make the app more visually appealing.
+            Feeling a bit limited with Qt, I decided to completely rebuild the
+            app using React and TypeScript with the MUI library, allowing for a
+            more dynamic, responsive, and attractive user interface that could
+            be used across devices. I also wanted to integrate a backend using
+            Node.js and Express, with a MySQL database to store user data and
+            records.
+          </p>
+          <!--MRC2 first image Collection-->
+          <div class="row align-items-md-stretch mb-1 mt-4">
+            <div class="col-sm-6 mb-sm-4">
+              <img
+                title="Collection view of MRC2"
+                alt="Collection view of MRC2"
+                src="assets/MRC2Collection.png"
+                class="rounded-3 img-fluid shadow border d-none d-sm-block"
+                onmouseover=""
+              />
+            </div>
+            <div class="col-sm-6 mb-4">
+              <div
+                class="p-sm-3 p-md-4 bg-light border border-primary rounded-3 shadow"
+              >
+                <img
+                  title="Collection view of MRC2"
+                  alt="Collection view of MRC2"
+                  src="assets/MRC2Collection.png"
+                  class="img-fluid d-sm-none rounded-top"
+                />
+                <h3 class="pt-3 px-3 p-sm-0">Collection</h3>
+                <p class="pb-3 px-3 p-sm-0 mb-0">
+                  This is the updated collection view with an improved layout
+                  and a familiar MUI design. The sidebar on the right allows for
+                  filtering by tags, rating, and release date, similar to the
+                  previous version. The top bar allows for sorting by various
+                  attributes, and the search bar enables quick searching by
+                  title or artist.
+                </p>
+              </div>
+            </div>
+          </div>
+          <p>
+            After recreating the basic functions from the first version of the
+            app (adding, editing, filtering, and sorting records, suggested tags
+            for records, and importing Discogs collections), I focused on
+            improving the user experience and developing new features. I knew I
+            wanted a wishlist feature, as I often found myself wanting to keep
+            track of albums I wanted to buy in the future in one place. I also
+            knew I wanted to add public profiles, because now that the app was
+            web-based, I wanted to be able to share my collection and see the
+            collections of my friends.
+          </p>
+          <!--MRC2 second image Profile-->
+          <div class="row align-items-md-stretch mb-1 mt-4">
+            <div class="col-sm-6 mb-4">
+              <div
+                class="p-sm-3 p-md-4 bg-light border border-primary rounded-3 shadow"
+              >
+                <img
+                  title="Profile view of MRC2"
+                  alt="Profile view of MRC2"
+                  src="assets/MRC2Profile.png"
+                  class="img-fluid d-sm-none rounded-top"
+                />
+                <h3 class="pt-3 px-3 p-sm-0">Profile</h3>
+                <p class="pb-3 px-3 p-sm-0 mb-0">
+                  This is the new profile that every user can customize. Each
+                  user can set their display name, profile picture, and bio in
+                  their settings, and they can also select three records to show
+                  off at the top of their profile. Other users can find their
+                  profile to view their collection and wishlist, as well as
+                  follow them to see when they add new records.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-sm-4 d-none d-sm-block">
+              <img
+                title="Profile view of MRC2"
+                alt="Profile view of MRC2"
+                src="assets/MRC2Profile.png"
+                class="rounded-3 border img-fluid shadow"
+              />
+            </div>
+          </div>
+          <!--MRC2 third image Feed-->
+          <div class="row align-items-md-stretch mb-1 mt-4">
+            <div class="col-sm-6 mb-sm-4">
+              <img
+                title="Feed view of MRC2"
+                alt="Feed view of MRC2"
+                src="assets/MRC2Feed.png"
+                class="rounded-3 img-fluid shadow border d-none d-sm-block"
+                onmouseover=""
+              />
+            </div>
+            <div class="col-sm-6 mb-4">
+              <div
+                class="p-sm-3 p-md-4 bg-light border border-primary rounded-3 shadow"
+              >
+                <img
+                  title="Feed view of MRC2"
+                  alt="Feed view of MRC2"
+                  src="assets/MRC2Feed.png"
+                  class="img-fluid d-sm-none rounded-top"
+                />
+                <h3 class="pt-3 px-3 p-sm-0">Feed</h3>
+                <p class="pb-3 px-3 p-sm-0 mb-0">
+                  This is the feed view. It is where a user can go to see the
+                  latest activity from users they follow, such as new records
+                  added to their collections, the rating they gave it, and any
+                  tags they added.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="m-0" />
+
+      <!--MRC1 Section-->
+      <section class="resume-section" id="MRC1">
+        <div class="resume-section-content">
+          <h2 class="mb-4">My Record Collection v1</h2>
+          <div class="mb-3">
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              C++
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Qt
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              APIs
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Multithreading
+            </button>
+          </div>
+          <img
+            title="MRC Logo"
+            alt="MRC Logo"
+            src="assets/MRCLogo.png"
+            class="float-end imgshadow m-3"
+            style="height: 7em"
+            alt=""
+          />
+          <p>
+            <a
+              href="https://github.com/Drag0nCodes/MyRecordCollection"
+              target="_blank"
+              >My Record Collection v1</a
+            >
+            was my first major personal project. I had just finished CS3307:
+            Objected-Oriented Design and Analysis, where we were tasked to come
+            up with our own idea for a software and make it with C++. We came
+            across the Qt framework and used it to make an crude music player
+            with playlists and a queue. With this new knowledge, I set out to
+            solve my problem by using Qt during reading week. I had a rough idea
+            of what I wanted it to do. It should be able to search and find any
+            record (using an API), save the record to a collection with user
+            defined tags and ratings, and the user should be able to sort the
+            collection by those tags and ratings.
+          </p>
+          <!--MRC first image 1.0.0-->
+          <div class="row align-items-md-stretch mb-1 mt-4">
+            <div class="col-sm-6 mb-sm-4">
+              <img
+                title="The first version of MRC"
+                alt="Photo of the first version of MRC"
+                src="assets/MRC100.jpg"
+                class="rounded-3 img-fluid shadow border d-none d-sm-block"
+                onmouseover=""
+              />
+            </div>
+            <div class="col-sm-6 mb-4">
+              <div
+                class="p-sm-3 p-md-4 bg-light border border-primary rounded-3 shadow"
+              >
+                <img
+                  title="The first version of MRC"
+                  alt="Photo of the first version of MRC"
+                  src="assets/MRC100.jpg"
+                  class="img-fluid d-sm-none rounded-top"
+                />
+                <h3 class="pt-3 px-3 p-sm-0">MRC 1.0.0</h3>
+                <p class="pb-3 px-3 p-sm-0 mb-0">
+                  This is the first (mostly) working version of what I created.
+                  It got the basics of what I wanted it to be able to do down.
+                  Adding record, tags, and ratings. I found myself actually
+                  wanting to use the app to pick what to listen to and I even
+                  started listening to my records more. I considered it a
+                  success.
+                </p>
+              </div>
+            </div>
+          </div>
+          <p>
+            Over the course of about half a year I continued to make incremental
+            updates to the app with feedback from friends that saw and used the
+            app, and of course adding things I wanted from the app. Below are
+            features I added with each minor version increment.
+          </p>
+          <!--MRC version table-->
+          <div class="row bg-light shadow mx-1 my-4 border border-primary">
+            <div class="col-sm-6 col-md-3 col-lg-6 col-xl-3 border p-3 p-md-4">
+              <h3>v1.1.0</h3>
+              <ul class="mb-lg-1">
+                <li>Suggested tags from genres on Wikipedia</li>
+                <li>Themes (dark and light)</li>
+                <li>Record counter</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-6 col-xl-3 border p-3 p-md-4">
+              <h3>v1.2.0</h3>
+              <ul class="mb-lg-1">
+                <li>Import Discogs collection (multi-threaded)</li>
+                <li>Saved preferences</li>
+                <li>Checkmarks in tag menus</li>
+                <li>Delete all records and tags</li>
+                <li>Reset filters</li>
+                <li>Pick a record for me</li>
+                <li>About and contact info</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-6 col-xl-3 border p-3 p-md-4">
+              <h3>v1.3.0</h3>
+              <ul class="mb-lg-1">
+                <li>Edit record attributes</li>
+                <li>Create a custom record</li>
+                <li>Progress bar for Discogs import</li>
+                <li>Tag count in filter list</li>
+                <li>Export data</li>
+                <li>Filter by rating</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-6 col-xl-3 border p-3 p-md-4">
+              <h3>v1.4.0</h3>
+              <ul class="mb-lg-1">
+                <li>Added "Released" and "Date Added" attributes</li>
+                <li>Resizable window</li>
+                <li>Hide columns from record table</li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            After v1.4.0, I felt like I was mostly "done" so I spent some time
+            figuring out how to compile the app on a Mac so I could give my Mac
+            user friends a version they could use. Plus, I made some minor
+            adjustments here and there that I wanted that didn't feel major. I
+            made some performance improvements through increased multithreading
+            and I added an album cover loading animation, among other bug fixes
+            and improvements.
+          </p>
+          <!--MRC second image 1.4.5-->
+          <div class="row align-items-md-stretch mb-1 mt-4">
+            <div class="col-sm-6 mb-4">
+              <div
+                class="p-sm-3 p-md-4 bg-light border border-primary rounded-3 shadow"
+              >
+                <img
+                  title="The most recent version of MRC"
+                  alt="Photo of the most recent version of MRC"
+                  src="assets/MRC145.jpg"
+                  class="img-fluid d-sm-none rounded-top"
+                />
+                <h3 class="pt-3 px-3 p-sm-0">MRC 1.4.5</h3>
+                <p class="pb-3 px-3 p-sm-0 mb-0">
+                  MRC 1.4.5 is the final version of the desktop app. I quite
+                  like it and I found it to be a great proof of concept. I often
+                  used it and I always kept my collection up-to-date. It can be
+                  found
+                  <a
+                    href="https://github.com/Drag0nCodes/MyRecordCollection/releases/tag/v1.4.5"
+                    target="_blank"
+                    >here</a
+                  >
+                  . Just download source code and run the precompiled app in the
+                  "My Record Collection-xxx" folder.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-sm-4 d-none d-sm-block">
+              <img
+                title="The most recent version of MRC"
+                alt="Photo of the most recent version of MRC"
+                src="assets/MRC145.jpg"
+                class="rounded-3 border img-fluid shadow"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="m-0" />
+
+      <!--4471 Service registry section-->
+      <section class="resume-section" id="ServiceReg">
+        <div class="resume-section-content">
+          <h2 class="mb-4">Service Registry</h2>
+          <div class="mb-3">
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Node.JS
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              HTTP
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              MySQL
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              HTML
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              CSS
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              JS
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              AWS
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Teamwork
+            </button>
+          </div>
+          <p>
+            For the class project of CS4471: Requirement Analysis in my fourth
+            year, my group was tasked with creating a microservice-based system
+            that would operate in a cloud environment. For this project, we were
+            required to create a service registry that manages service
+            registrations and maintains an inventory of available services, a
+            service consumer (a front-end application) that enables users to
+            discover registered services through a GUI, and multiple services
+            designed as loosely coupled and independently deployable
+            microservices capable of communicate with the registry through HTTP,
+            AMQP, or gRPC. You can view the
+            <a href="assets/4471_Project_Desc.pdf" target="_blank"
+              >project description here</a
+            >.
+          </p>
+          <p>
+            We decided to code our registry with Node.JS, use MySQL for its
+            database, AWS for cloud hosting, and HTTP requests to enable
+            communication between the registry and services. We then had to
+            identify functional, quality, and architecturally significant
+            requirements (ASRs) of the registry and each service to guide our
+            approach in developing the system's architecture. I was assigned to
+            create the architecture diagrams, identify ASRs, and implement the
+            registry and the first two microservices. As part of my
+            implementation, I provided a Node.JS file to help my groupmates
+            easily connect their services to the registry.
+            <a href="assets/4471_Final_Report.pdf" target="_blank"
+              >Find our full final report here</a
+            >
+            and
+            <a
+              href="https://github.com/Drag0nCodes/Group_3_Service_Registry"
+              target="_blank"
+              >the implementation code here</a
+            >.
+          </p>
+          <div class="row">
+            <!--4471 first image group-->
+            <div class="mb-1 mt-4 col-md-6 col-lg-12 col-xxl-6">
+              <div
+                class="bg-light border border-primary rounded-3 shadow p-3 p-md-4"
+              >
+                <div class="text-center mb-3">
+                  <img
+                    title="Overall system architecture"
+                    alt="Overall system architecture"
+                    src="assets/4471_arch.png"
+                    class="img-fluid rounded-top"
+                  />
+                </div>
+                <h3>Overall System Architecture</h3>
+                <p>
+                  Our system architecture consisted of three modules: one for
+                  the microservices, one for the registry, and one for the
+                  registry database. The microservice modules would be able to
+                  send heartbeats to the registry every 15 seconds, letting it
+                  know the microservice remained available, send register or
+                  deregister requests to the registry, and provide a unique
+                  function for the user.
+                </p>
+                <p>
+                  For the backend the registry processed those POST requests
+                  made by the microservices and ensured the database remained up
+                  to date. If it did not receive a heartbeat from a microservice
+                  for 35 seconds, it would mark the microservice as unavailable.
+                  For the front end, the registry provided a GUI for users as a
+                  webpage along with another method to fetch the currently
+                  registered microservices. The webpage would use this
+                  information to update its list every few seconds.
+                </p>
+                <p class="mb-0">
+                  The final module, the database, was implemented with MySQL and
+                  stored all necessary information about each registered
+                  microservice, such as the ID, name, URL, status, and timestamp
+                  of the last heartbeat.
+                </p>
+              </div>
+            </div>
+            <!--4471 second image group-->
+            <div class="mb-1 mt-4 col-md-6 col-lg-12 col-xxl-6">
+              <div
+                class="bg-light border border-primary rounded-3 shadow p-3 p-md-4"
+              >
+                <div class="text-center row mb-3">
+                  <div class="col-sm-6 col-md-12 col-lg-6 col-xxl-12">
+                    <p>Context Diagram</p>
+                    <img
+                      title="Architecture context diagram"
+                      alt="Architecture context diagram"
+                      src="assets/4471_context.png"
+                      class="img-fluid rounded-top mb-3 mb-sm-0 mb-md-3 mb-lg-0 mb-xxl-3"
+                    />
+                  </div>
+                  <hr
+                    class="m-0 mb-3 d-block d-sm-none d-md-block d-lg-none d-xxl-block"
+                  />
+                  <div class="col-sm-6 col-md-12 col-lg-6 col-xxl-12">
+                    <p>Component Diagram</p>
+                    <img
+                      title="Architecture component-and-connector diagram"
+                      alt="Architecture component-and-connector diagram"
+                      src="assets/4471_cc.png"
+                      class="img-fluid rounded-top"
+                    />
+                  </div>
+                </div>
+                <h3>A Couple More Diagrams</h3>
+                <p>
+                  The first diagram illustrates the context in which the
+                  architecture would be deployed.
+                </p>
+                <p class="mb-0">
+                  The second diagram is a component-and-connector diagram,
+                  showing how the modules of the architecture interact, which
+                  modules provide interfaces, and which require them.
+                </p>
+              </div>
+            </div>
+            <!--4471 demo video-->
+            <div class="mb-1 mt-4 col-md-6 col-lg-12 col-xl-6">
+              <div class="bg-light border border-primary rounded-3 shadow">
+                <video class="rounded-3 w-100 d-block" controls>
+                  <source src="assets/4471_demo.mp4" type="video/mp4" />
+                </video>
+                <div class="p-3 px-lg-4 pb-lg-4 d-md-none d-lg-block d-xl-none">
+                  <h3>Demo</h3>
+                  <p>
+                    Finally, here is a quick demo of the implementation of the
+                    architecture running locally. I unfortunately only have
+                    microservice 1 and 2 on my repository; the other 3 are
+                    managed by my groupmates.
+                  </p>
+                  <p class="mb-0">
+                    The registry's console can be seen below its GUI. You can
+                    see the registry and services performing as specified, with
+                    registration, deregistration, and heartbeats being sent from
+                    service to registry accordingly.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mb-1 mt-4 col-6 d-none d-md-block d-lg-none d-xl-block">
+              <div class="bg-light border border-primary rounded-3 shadow">
+                <div class="p-4">
+                  <h3>Demo</h3>
+                  <p>
+                    Finally, here is a quick demo of the implementation of the
+                    architecture running locally. I unfortunately only have
+                    microservice 1 and 2 on my repository; the other 3 are
+                    managed by my groupmates.
+                  </p>
+                  <p class="mb-0">
+                    The registry's console can be seen below its GUI. You can
+                    see the registry and services performing as specified, with
+                    registration, deregistration, and heartbeats being sent from
+                    service to registry accordingly.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="m-0" />
+
+      <!--2033 Business Site Section-->
+      <section class="resume-section" id="BusSite">
+        <div class="resume-section-content">
+          <h2 class="mb-4">Business Website</h2>
+          <div class="mb-3">
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              HTML
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              CSS
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              JavaScript
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Bootstrap
+            </button>
+          </div>
+          <p>
+            The final project of CS2033: Multimedia & Communication II in my
+            fourth year required us to individually create a responsive,
+            interactive, informative, and attractive website for a fake business
+            of our choice. As you might have guessed by now, I am an avid record
+            collector, so I chose to make a website for a record store.
+          </p>
+          <p class="mb-0">
+            Some of the requirements for the site were as follows:
+          </p>
+          <ul>
+            <li>Single page</li>
+            <li>Enhanced parallax</li>
+            <li>ScrollFire</li>
+            <li>Day specific messages</li>
+            <li>CSS animation</li>
+            <li>CSS transition</li>
+            <li>Tiled background</li>
+            <li>Back to top button</li>
+            <li>At least 4 products</li>
+            <li>Form modification and validation</li>
+          </ul>
+          <p>
+            I learned a lot from this course and its prerequisite, lessons I
+            have applied to create this site showcasing myself and my projects.
+          </p>
+          <h4>Check out the <a href="2033_business/">business' site</a></h4>
+          <!--2033 Images-->
+          <div class="row align-items-md-stretch mt-4">
+            <div class="col-sm-6 mb-4 mb-md-0">
+              <img
+                title="About section of business website"
+                alt="About section of business website"
+                src="assets/2033_about.jpg"
+                class="rounded-3 img-fluid shadow border"
+              />
+            </div>
+            <div class="col-sm-6">
+              <img
+                title="Products section of business website"
+                alt="Products section of business website"
+                src="assets/2033_products.jpg"
+                class="rounded-3 img-fluid shadow border"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr class="m-0" />
+
+      <!--2212 GIS Project-->
+      <section class="resume-section" id="GIS">
+        <div class="resume-section-content">
+          <h2 class="mb-4">GIS Project</h2>
+          <div class="mb-3">
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Java
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              UI
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Git
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Atlassian Suite
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Unit Testing
+            </button>
+            <button
+              type="button"
+              class="skill btn btn-primary disabled py-1 mb-1"
+            >
+              Teamwork
+            </button>
+          </div>
+          <p>
+            For CS2212: Introduction to Software Engineering in my second year,
+            I participated in my first computer science group project. It was my
+            first experience coding on a team, requiring us to develop a unified
+            idea of a codebase and deal with version control collaboratively. To
+            stay organized, we used the Atlassian suite of software.
+          </p>
+          <p>
+            For the project, we needed to create a geographic information system
+            (GIS) covering three buildings on campus. The system needed to
+            include premade informational POIs on the map as well as
+            functionality for user-created POIs. We were required to use Java
+            and were encouraged to use NetBeans for its drag-and-drop UI
+            creator. Additionally, we wrote unit tests for the code using JUnit.
+          </p>
+          <div class="row align-items-md-stretch mb-1 mt-4">
+            <div class="col-md-6 col-lg-12 col-xl-6 mb-4">
+              <div class="bg-light border border-primary rounded-3 shadow">
+                <img
+                  title="GIS project GUI"
+                  alt="GIS project GUI"
+                  src="assets/2212_GIS.jpg"
+                  class="img-fluid d-md-none d-lg-block d-xl-none rounded-top"
+                />
+                <div class="p-3 p-md-4">
+                  <h3>The Application</h3>
+                  <p>
+                    This is how our project appeared when a user selected a
+                    user-created POI and chose to edit it. You can see on the
+                    right all of the POI's data fields that you could change,
+                    and below that, the current weather on campus. Additionally,
+                    the right panel (not shown) included options to toggle
+                    different layers of POIs and a user favorites list.
+                  </p>
+                  <p class="mb-0">
+                    In the middle-top section, you can see a list of all
+                    existing POIs, and below that is information about the
+                    selected POI. On the left, you have the map, which you can
+                    scroll around to view the entire floor.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-6 mb-sm-4 d-none d-md-block d-lg-none d-xl-block"
+            >
+              <img
+                title="GIS project GUI"
+                alt="GIS project GUI"
+                src="assets/2212_GIS.jpg"
+                class="rounded-3 img-fluid border shadow"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-</body>
-
+  </body>
 </html>
