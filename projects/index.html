@@ -507,35 +507,107 @@
               />
             </div>
           </div>
+
           <!--MRC2 second image Collection-->
           <div class="row align-items-md-stretch mb-1 mt-4">
-            <div class="col-sm-6 mb-sm-4">
-              <img
-                title="Collection view of MRC2"
-                alt="Collection view of MRC2"
-                src="assets/MRC2Collection.png"
-                class="rounded-3 img-fluid shadow border d-none d-sm-block"
-                onmouseover=""
-              />
+            <div
+              id="CollectionCarouselOutter"
+              class="carousel slide col-sm-6 mb-sm-4 d-none d-sm-block"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#CollectionCarouselOutter"
+                  data-bs-slide-to="0"
+                  class="active bg-primary"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#CollectionCarouselOutter"
+                  data-bs-slide-to="1"
+                  class="bg-primary"
+                  aria-label="Slide 2"
+                ></button>
+              </div>
+              <div class="carousel-inner shadow">
+                <div class="carousel-item active" data-bs-interval="3000">
+                  <img
+                    src="assets/MRC2_collection.png"
+                    class="d-block w-100 rounded-3 border img-fluid"
+                    alt="Collection view of MRC2"
+                  />
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img
+                    src="assets/MRC2_master.png"
+                    class="d-block w-100 rounded-3 border img-fluid"
+                    alt="Master view of MRC2"
+                  />
+                </div>
+              </div>
             </div>
             <div class="col-sm-6 mb-4">
               <div
                 class="p-sm-3 p-md-4 bg-light border border-primary rounded-3 shadow"
               >
-                <img
-                  title="Collection view of MRC2"
-                  alt="Collection view of MRC2"
-                  src="assets/MRC2Collection.png"
-                  class="img-fluid d-sm-none rounded-top"
-                />
-                <h3 class="pt-3 px-3 p-sm-0">Collection</h3>
+                <div
+                  id="CollectionCarouselInner"
+                  class="carousel slide d-sm-none"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="assets/MRC2_collection.png"
+                        class="d-block w-100 rounded-top border img-fluid"
+                        alt="Collection view of MRC2"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="assets/MRC2_master.png"
+                        class="d-block w-100 rounded-top border img-fluid"
+                        alt="Master view of MRC2"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#CollectionCarouselInner"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#CollectionCarouselInner"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <h3 class="pt-3 px-3 p-sm-0">Collection and Masters</h3>
                 <p class="pb-3 px-3 p-sm-0 mb-0">
                   This is the updated collection view with an improved layout
-                  and a familiar MUI design. The sidebar on the right allows for
-                  filtering by tags, rating, and release date, similar to the
-                  previous version. The top bar allows for sorting by various
-                  attributes, and the search bar enables quick searching by
-                  title or artist.
+                  and a familiar MUI design. It allows for completly
+                  customizable and fast filtering, sorting, and searching. Users
+                  can search and add records to add to one of their collections
+                  from the Last.FM database with custom tags, ratings, and
+                  reviews. They can also see what other users have rated and
+                  reviewed the record.
                 </p>
               </div>
             </div>
@@ -549,68 +621,156 @@
             track of albums I wanted to buy in the future in one place. I also
             knew I wanted to add public profiles, because now that the app was
             web-based, I wanted to be able to share my collection and see the
-            collections of my friends.
+            collections of my friends. These new features snowballed into even
+            more new features, I definately understand scope creep quite a bit
+            better now. I created a feed to see recent friend activity, users
+            can create their own lists of record to share and like others'
+            lists, and each user has statistics constantly kept up-to-date in
+            the backend that tracks the genre makeup of their records and the
+            average rating of each genre. User's can view their own stats and
+            compare their collection and stats with others.
           </p>
-          <!--MRC2 third image Profile-->
+          <!--MRC2 third image Social-->
           <div class="row align-items-md-stretch mb-1 mt-4">
             <div class="col-sm-6 mb-4">
               <div
                 class="p-sm-3 p-md-4 bg-light border border-primary rounded-3 shadow"
               >
-                <img
-                  title="Profile view of MRC2"
-                  alt="Profile view of MRC2"
-                  src="assets/MRC2Profile.png"
-                  class="img-fluid d-sm-none rounded-top"
-                />
-                <h3 class="pt-3 px-3 p-sm-0">Profile</h3>
+                <div
+                  id="SocialCarouselInner"
+                  class="carousel slide d-sm-none"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="assets/MRC2_profile.png"
+                        class="d-block w-100 rounded-top border img-fluid"
+                        alt="Profile view of MRC2"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="assets/MRC2_activity.png"
+                        class="d-block w-100 rounded-top border img-fluid"
+                        alt="Activity view of MRC2"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="assets/MRC2_list.png"
+                        class="d-block w-100 rounded-top border img-fluid"
+                        alt="List view of MRC2"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="assets/MRC2_compare.png"
+                        class="d-block w-100 rounded-top border img-fluid"
+                        alt="Stats view of MRC2"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#SocialCarouselInner"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#SocialCarouselInner"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <h3 class="pt-3 px-3 p-sm-0">Social Features</h3>
                 <p class="pb-3 px-3 p-sm-0 mb-0">
-                  This is the new profile that every user can customize. Each
-                  user can set their display name, profile picture, and bio in
-                  their settings, and they can also select three records to show
-                  off at the top of their profile. Other users can find their
-                  profile to view their collection and wishlist, as well as
-                  follow them to see when they add new records.
+                  This is what the social features of MRC2 look like. Users can
+                  create their profile, showoff their favourite records and what
+                  they are currently enjoying, see recent activity from their
+                  friends, create, share, and like lists of records, and compare
+                  their collection statistics with others.
                 </p>
               </div>
             </div>
-            <div class="col-sm-6 mb-sm-4 d-none d-sm-block">
-              <img
-                title="Profile view of MRC2"
-                alt="Profile view of MRC2"
-                src="assets/MRC2Profile.png"
-                class="rounded-3 border img-fluid shadow"
-              />
-            </div>
-          </div>
-          <!--MRC2 fourth image Feed-->
-          <div class="row align-items-md-stretch mb-1 mt-4">
-            <div class="col-sm-6 mb-sm-4">
-              <img
-                title="Feed view of MRC2"
-                alt="Feed view of MRC2"
-                src="assets/MRC2Feed.png"
-                class="rounded-3 img-fluid shadow border d-none d-sm-block"
-                onmouseover=""
-              />
-            </div>
-            <div class="col-sm-6 mb-4">
-              <div
-                class="p-sm-3 p-md-4 bg-light border border-primary rounded-3 shadow"
-              >
-                <img
-                  title="Feed view of MRC2"
-                  alt="Feed view of MRC2"
-                  src="assets/MRC2Feed.png"
-                  class="img-fluid d-sm-none rounded-top"
-                />
-                <h3 class="pt-3 px-3 p-sm-0">Feed</h3>
-                <p class="pb-3 px-3 p-sm-0 mb-0">
-                  This is the feed view. It is where a user can go to see the
-                  latest activity from users they follow, such as new records
-                  added to their collections, the rating they gave it, and any
-                  tags they added.
-                </p>
+            <div
+              id="SocialCarouselOutter"
+              class="carousel slide col-sm-6 mb-sm-4 d-none d-sm-block"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#SocialCarouselOutter"
+                  data-bs-slide-to="0"
+                  class="active bg-primary"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#SocialCarouselOutter"
+                  data-bs-slide-to="1"
+                  class="bg-primary"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#SocialCarouselOutter"
+                  data-bs-slide-to="2"
+                  class="bg-primary"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#SocialCarouselOutter"
+                  data-bs-slide-to="3"
+                  class="bg-primary"
+                  aria-label="Slide 4"
+                ></button>
+              </div>
+              <div class="carousel-inner shadow">
+                <div class="carousel-item active" data-bs-interval="3000">
+                  <img
+                    src="assets/MRC2_profile.png"
+                    class="d-block w-100 rounded-3 border img-fluid"
+                    alt="Profile view of MRC2"
+                  />
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img
+                    src="assets/MRC2_activity.png"
+                    class="d-block w-100 rounded-3 border img-fluid"
+                    alt="Activity view of MRC2"
+                  />
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img
+                    src="assets/MRC2_list.png"
+                    class="d-block w-100 rounded-3 border img-fluid"
+                    alt="List view of MRC2"
+                  />
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img
+                    src="assets/MRC2_compare.png"
+                    class="d-block w-100 rounded-3 border img-fluid"
+                    alt="Stats view of MRC2"
+                  />
+                </div>
               </div>
             </div>
           </div>
